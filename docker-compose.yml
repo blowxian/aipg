@@ -1,8 +1,9 @@
 version: '3.8'
 
 services:
-  app:
+  aipg:
     image: blowxian/aipg:latest
+    container_name: aipg
     ports:
       - "3000:3000"
     environment:

@@ -1,5 +1,4 @@
 import type {Metadata} from "next";
-import {Inter} from "next/font/google";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import Script from "next/script";
@@ -8,8 +7,6 @@ import "@radix-ui/themes/styles.css"
 import "../css/style.css";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-
-const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
     title: "AI Paragraph Generator for writer",
