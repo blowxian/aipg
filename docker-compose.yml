@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: blowxian/lison-next-tmpl:latest
+    image: blowxian/aipg:latest
     ports:
       - "3000:3000"
     environment:

@@ -1,0 +1,52 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Additional styles */
+/* Additional styles */
+@import "additional-styles/utility-patterns.css";
+@import "additional-styles/theme.css";
+
+@import "tailwindcss/utilities";
+
+.AccordionRoot {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.AccordionItem {
+    border-top: 1px solid #eaeaea;
+}
+
+.AccordionHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.AccordionTrigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.AccordionContent {
+    padding: 16px;
+    background-color: #fff;
+    border-top: 1px solid #eaeaea;
+    font-size: 14px;
+    color: #666;
+}
+
+.AccordionChevron {
+    transition: transform 0.2s ease;
+}
+
+[data-state='open'] .AccordionChevron {
+    transform: rotate(180deg);
+}
