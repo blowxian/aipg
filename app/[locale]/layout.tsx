@@ -28,7 +28,7 @@ export default async function LocaleLayout({
     return (
         <html lang={locale}>
         <body>
-        <Theme>
+        <Theme accentColor="violet">
             <NextIntlClientProvider messages={messages}>
                 <Header />
                 {children}

@@ -50,3 +50,13 @@
 [data-state='open'] .AccordionChevron {
     transform: rotate(180deg);
 }
+
+/* styles/globals.css */
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* 隐藏滚动条 */
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE和Edge */
+    scrollbar-width: none;  /* Firefox */
+}
