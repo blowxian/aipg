@@ -8,10 +8,6 @@ import {LockClosedIcon} from "@radix-ui/react-icons";
 const toggleGroupItemClasses =
     'hover:bg-violet3 text-mauve11 data-[state=on]:bg-violet6 data-[state=on]:text-violet12 flex h-[30px] items-center justify-center bg-white text-base leading-4 first:rounded-l last:rounded-r focus:z-10 focus:outline-none px-2 text-xs disabled:bg-gray-200 disabled:text-gray-500 disabled:cursor-not-allowed';
 
-const handleToggleChange = (value: string) => {
-    console.log('Selected Value:', value);
-};
-
 const styleOptions: Option[] = [
     {value: 'standard', label: 'Standard'},
     {value: 'creative', label: 'Creative'},
@@ -41,8 +37,8 @@ const paragraphOptions: Option[] = [
 
 const languageOptions: Option[] = [
     {value: 'english', label: 'English'},
-    {value: 'mandarin', label: 'Chinese', paid: true},
-    {value: 'russian', label: 'Russian', paid: true},
+    {value: 'mandarin', label: 'Chinese'},
+    {value: 'russian', label: 'Russian'},
     {value: 'spanish', label: 'Spanish', paid: true},
     {value: 'french', label: 'French', paid: true},
     {value: 'portuguese', label: 'Portuguese', paid: true},
@@ -57,16 +53,16 @@ const languageOptions: Option[] = [
 ];
 
 const generateOptions: Option[] = [
-    { value: 'direct', label: 'Direct' },
-    { value: 'enhanced', label: 'Enhanced with Search', paid: true }
+    {value: 'direct', label: 'Direct'},
+    {value: 'enhanced', label: 'Enhanced with Search', paid: true}
 ];
 
-const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options}) => (
+const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options, onChange}) => (
     <ToggleGroup.Root
         className="inline-flex bg-mauve6 rounded space-x-px border mb-3 overflow-x-auto no-scrollbar"
         type="single"
         defaultValue={defaultValue}
-        onValueChange={handleToggleChange}
+        onValueChange={onChange}
         aria-label="Style selection"
     >
         {options.map((option, index) => (
@@ -79,7 +75,7 @@ const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options}) =>
             >
                 {option.paid ? (
                     <span className="flex items-center">
-                        <LockClosedIcon className="mr-1" />
+                        <LockClosedIcon className="mr-1"/>
                         {option.label}
                     </span>
                 ) : (
@@ -90,20 +86,20 @@ const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options}) =>
     </ToggleGroup.Root>
 );
 
-export const StyleToggle = () => {
-    return Toggle({defaultValue: 'standard', options: styleOptions});
+export const StyleToggle = ({onChange}) => {
+    return Toggle({defaultValue: 'standard', options: styleOptions, onChange: onChange});
 };
 
-export const ParagraphToggle = () => {
-    return Toggle({defaultValue: '1', options: paragraphOptions});
+export const ParagraphToggle = ({onChange}) => {
+    return Toggle({defaultValue: '1', options: paragraphOptions, onChange: onChange});
 };
 
-export const LanguageToggle = () => {
-    return Toggle({defaultValue: 'english', options: languageOptions});
+export const LanguageToggle = ({onChange}) => {
+    return Toggle({defaultValue: 'english', options: languageOptions, onChange: onChange});
 };
 
-export const GenerateToggle = () => {
-    return Toggle({ defaultValue: 'direct', options: generateOptions });
+export const GenerateToggle = ({onChange}) => {
+    return Toggle({defaultValue: 'direct', options: generateOptions, onChange: onChange});
 };
 
 
