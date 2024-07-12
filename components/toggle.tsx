@@ -5,6 +5,10 @@ import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import {Option, ToggleGroupComponentProps} from './toggle.types';
 import {LockClosedIcon} from "@radix-ui/react-icons";
 
+type ToggleProps = {
+    onChange: (value: string) => void;
+};
+
 const toggleGroupItemClasses =
     'hover:bg-violet3 text-mauve11 data-[state=on]:bg-violet6 data-[state=on]:text-violet12 flex h-[30px] items-center justify-center bg-white text-base leading-4 first:rounded-l last:rounded-r focus:z-10 focus:outline-none px-2 text-xs disabled:bg-gray-200 disabled:text-gray-500 disabled:cursor-not-allowed';
 
@@ -86,19 +90,19 @@ const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options, onC
     </ToggleGroup.Root>
 );
 
-export const StyleToggle = ({onChange}) => {
+export const StyleToggle: React.FC<ToggleProps> = ({onChange}) => {
     return Toggle({defaultValue: 'standard', options: styleOptions, onChange: onChange});
 };
 
-export const ParagraphToggle = ({onChange}) => {
+export const ParagraphToggle: React.FC<ToggleProps> = ({onChange}) => {
     return Toggle({defaultValue: '1', options: paragraphOptions, onChange: onChange});
 };
 
-export const LanguageToggle = ({onChange}) => {
+export const LanguageToggle: React.FC<ToggleProps> = ({onChange}) => {
     return Toggle({defaultValue: 'english', options: languageOptions, onChange: onChange});
 };
 
-export const GenerateToggle = ({onChange}) => {
+export const GenerateToggle: React.FC<ToggleProps> = ({onChange}) => {
     return Toggle({defaultValue: 'direct', options: generateOptions, onChange: onChange});
 };
 
