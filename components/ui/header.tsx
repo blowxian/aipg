@@ -23,7 +23,7 @@ export default function Header() {
                 // Decode the credential
                 const base64Url = credential.split('.')[1];
                 const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
                     return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
                 }).join(''));
 
@@ -36,12 +36,6 @@ export default function Header() {
             };
         }
     }, []);
-
-    const handleLogout = () => {
-        // 执行登出逻辑
-        setUser(null);
-        console.log("User logged out");
-    };
 
     return (
         <header className="fixed top-2 z-30 w-full md:top-6">
@@ -61,12 +55,8 @@ export default function Header() {
                     <Flex className="flex items-center justify-end gap-3">
                         {user ? (
                             <div className="relative">
-                                <img src={user.avatar} alt="User Avatar" className="w-8 h-8 rounded-full cursor-pointer" />
-                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-                                    <button onClick={handleLogout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                        Logout
-                                    </button>
-                                </div>
+                                <img src={user.avatar} alt="User Avatar"
+                                     className="w-8 h-8 rounded-full"/>
                             </div>
                         ) : (
                             <>
@@ -75,14 +65,16 @@ export default function Header() {
                                      data-context="signin"
                                      data-ux_mode="popup"
                                      data-callback="googleLoginCallback"
+                                     data-nonce=""
                                      data-auto_select="true"
                                      data-itp_support="true">
                                 </div>
+
                                 <div className="g_id_signin"
                                      data-type="icon"
-                                     data-shape="square"
+                                     data-shape="circle"
                                      data-theme="outline"
-                                     data-text="signin_with"
+                                     data-text="signin"
                                      data-size="medium">
                                 </div>
                             </>
