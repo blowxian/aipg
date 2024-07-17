@@ -1,10 +1,9 @@
-import * as Popover from '@radix-ui/react-popover';
-import {Box, Button, Flex, Section, Separator, Text} from '@radix-ui/themes';
+import {Button} from '@radix-ui/themes';
 
 const Price: React.FC = () => {
     return (
         <section className="bg-white dark:bg-gray-900" id="price">
-            <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div className="py-8 px-0 mx-auto max-w-screen-xl lg:py-16 lg:px-2">
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Choose the
                         plan that suits your needs</h2>
@@ -136,8 +135,8 @@ const PlanCard: React.FC<{
                 <span className="mr-2 text-5xl font-extrabold">{price}</span>
                 <span className="text-gray-500 dark:text-gray-400">{duration}</span>
             </div>
-            <ul role="list" className="mb-8 space-y-1 text-left text-xs">
-            {features.map((feature, index) => (
+            <ul role="list" className="mb-8 space-y-1 text-left text-xs flex-grow">
+                {features.map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                         <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
                              viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +148,9 @@ const PlanCard: React.FC<{
                     </li>
                 ))}
             </ul>
-            <Button size="3" asChild><a href="#">{buttonText}</a></Button>
+            <div className="mt-auto">
+                <Button size="3" asChild><a href="#">{buttonText}</a></Button>
+            </div>
         </div>
     );
 };
