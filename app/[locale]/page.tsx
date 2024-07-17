@@ -17,7 +17,7 @@ export default function Home() {
 
     return (
         <Container>
-            <Section>
+            <Section id="generator">
                 <Heading as="h1" size="9" align="center" mt="8">{t("title" as any)}</Heading>
             </Section>
             <ParagraphGenerator/>

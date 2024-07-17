@@ -2,7 +2,7 @@ import {Button} from '@radix-ui/themes';
 
 const Price: React.FC = () => {
     return (
-        <section className="bg-white dark:bg-gray-900" id="price">
+        <section className="bg-white dark:bg-gray-900 pt-8" id="price">
             <div className="py-8 px-0 mx-auto max-w-screen-xl lg:py-16 lg:px-2">
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Choose the
@@ -125,7 +125,7 @@ const PlanCard: React.FC<{
 }> = ({title, price, originalPrice, duration, features, buttonText}) => {
     return (
         <div
-            className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+            className="flex flex-col p-3 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-4 dark:bg-gray-800 dark:text-white">
             <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
             <div className="flex justify-center items-baseline my-8">
                 {originalPrice && (
@@ -135,7 +135,8 @@ const PlanCard: React.FC<{
                 <span className="mr-2 text-5xl font-extrabold">{price}</span>
                 <span className="text-gray-500 dark:text-gray-400">{duration}</span>
             </div>
-            <ul role="list" className="mb-8 space-y-1 text-left text-xs flex-grow">
+            <Button size="3" asChild><a href="#">{buttonText}</a></Button>
+            <ul role="list" className="mt-8 space-y-1 text-left text-xs">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
                         <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
@@ -148,9 +149,6 @@ const PlanCard: React.FC<{
                     </li>
                 ))}
             </ul>
-            <div className="mt-auto">
-                <Button size="3" asChild><a href="#">{buttonText}</a></Button>
-            </div>
         </div>
     );
 };

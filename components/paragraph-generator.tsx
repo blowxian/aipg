@@ -103,7 +103,7 @@ export default function ParagraphGenerator() {
     }, [handleSubmit, handleClear, handleCopy, isLoading]);
 
     return (
-        <Section id="generator">
+        <Section>
             <Flex direction="column" className="border rounded-lg p-3">
                 <Flex>
                     <StyleToggle onChange={setStyle}/>

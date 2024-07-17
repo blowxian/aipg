@@ -30,12 +30,15 @@ export default async function LocaleLayout({
         <body>
         <Theme accentColor="violet">
             <NextIntlClientProvider messages={messages}>
-                <Header />
+                <Header/>
                 {children}
-                <Footer border={true} />
+                <Footer border={true}/>
             </NextIntlClientProvider>
             {/*<ThemePanel />*/}
         </Theme>
+        <Script src="https://accounts.google.com/gsi/client"
+                strategy="afterInteractive"
+        />
         <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
             strategy="afterInteractive"
