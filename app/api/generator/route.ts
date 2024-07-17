@@ -1,4 +1,4 @@
-import {NextRequest} from 'next/server';
+import { NextRequest } from 'next/server';
 import Together from 'together-ai';
 
 export const runtime = 'edge';
@@ -7,14 +7,14 @@ export async function GET(req: NextRequest) {
     const searchParams = req.nextUrl.searchParams;
     const message = searchParams.get('message');
     const style = searchParams.get('style') || 'Standard'; // 默认值为 'Standard'
-    const paragraphs = searchParams.get('paragraphs') || '1 paras'; // 默认值为 '1 paras'
+    const paragraphs = searchParams.get('paragraph') || '1'; // 默认值为 '1 paras'
     const language = searchParams.get('language') || 'English'; // 默认值为 'English'
     const mode = searchParams.get('mode') || 'Direct'; // 默认值为 'Direct'
 
     if (!message) {
-        return new Response(JSON.stringify({error: 'Message parameter is required'}), {
+        return new Response(JSON.stringify({ error: 'Message parameter is required' }), {
             status: 400,
-            headers: {'Content-Type': 'application/json'}
+            headers: { 'Content-Type': 'application/json' }
         });
     }
 
@@ -25,34 +25,42 @@ export async function GET(req: NextRequest) {
     const encoder = new TextEncoder();
 
     // 生成的详细 prompt
-    let prompt = `
+    const prompt = `
 You are a large language AI rewrite built by aiparagraphgenerator.net. You are given a user message, and please rewrite a clean, concise, and accurate version in paragraphs for the message.
 
 Please rewrite the User Input into ${paragraphs} paragraphs, each between 30 to 50 words. The paragraphs should be informative and written in ${style} style. The rewrite should be in ${language} and follow a ${mode} approach, maintaining the user's tone and style.
 
-Do not include any introductory or concluding remarks. Only provide the rewritten content. Ensure that there is a blank line between each paragraph when user input is multiple paragraphs.
-`;
+Do not include any introductory or concluding remarks. Only provide the rewritten content.${Number(paragraphs) > 1 ? " Ensure that there is a blank line between each paragraph when user input is multiple paragraphs." : ""}
+    `;
 
     try {
         const stream = await together.chat.completions.create({
             model: 'meta-llama/Llama-3-8b-chat-hf',
             messages: [
-                {role: "system", content: prompt},
-                {role: 'user', content: message},
+                { role: "system", content: prompt },
+                { role: 'user', content: message },
             ],
             stream: true,
         });
+
+        let inputCharCount = prompt.length + message.length;
+        let outputCharCount = 0;
 
         const readableStream = new ReadableStream({
             async start(controller) {
                 for await (const chunk of stream) {
                     const content = chunk.choices[0]?.delta?.content || '';
                     if (content) {
-                        controller.enqueue(encoder.encode(`data: ${JSON.stringify({content})}\n\n`));
+                        outputCharCount += content.length;
+                        controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content })}\n\n`));
                     }
                 }
                 controller.enqueue(encoder.encode('event: end\ndata: End of stream\n\n'));
                 controller.close();
+
+                // 在控制台中输出统计结果
+                console.log(`Input Characters: ${inputCharCount}`);
+                console.log(`Output Characters: ${outputCharCount}`);
             },
         });
 
@@ -65,7 +73,7 @@ Do not include any introductory or concluding remarks. Only provide the rewritte
         });
     } catch (error) {
         return new Response(
-            encoder.encode(`event: error\ndata: ${JSON.stringify({error: 'Failed to fetch data from Together API'})}\n\n`),
+            encoder.encode(`event: error\ndata: ${JSON.stringify({ error: 'Failed to fetch data from Together API' })}\n\n`),
             {
                 headers: {
                     'Content-Type': 'text/event-stream',
