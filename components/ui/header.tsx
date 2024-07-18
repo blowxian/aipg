@@ -52,7 +52,7 @@ export default function Header() {
                         <Link href="#price">Price</Link>
                     </Flex>
 
-                    <Flex className="flex items-center justify-end gap-3">
+                    <Flex>
                         {user ? (
                             <div className="relative">
                                 <img src={user.avatar} alt="User Avatar"

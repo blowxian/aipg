@@ -3,7 +3,7 @@ import Logo from "./logo";
 
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
-    <footer>
+    <footer className="overflow-x-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
@@ -15,7 +15,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <Logo />
             </div>
             <div className="text-sm text-gray-600">
-              &copy; Cruip.com - All rights reserved.
+              &copy; AIParagraphGenerator.net - All rights reserved.
             </div>
           </div>
 
