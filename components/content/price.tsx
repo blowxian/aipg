@@ -2,7 +2,7 @@ import {Button} from '@radix-ui/themes';
 
 const Price: React.FC = () => {
     return (
-        <section className="bg-white dark:bg-gray-900 pt-8" id="price">
+        <section className="bg-white dark:bg-gray-900 px-3 md:px-0 !py-3 md:!py-8" id="price">
             <div className="py-8 px-0 mx-auto max-w-screen-xl lg:py-16 lg:px-2">
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Choose the

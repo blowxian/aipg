@@ -3,7 +3,7 @@ import * as Accordion from '@radix-ui/react-accordion';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 
 const FAQ = () => (
-    <Accordion.Root type="multiple" className="AccordionRoot">
+    <Accordion.Root type="multiple" className="AccordionRoot px-3 md:px-0 !py-3 md:!py-8">
         {faqItems.map((item, index) => (
             <Accordion.Item key={index} value={`item-${index}`} className="AccordionItem">
                 <Accordion.Header className="AccordionHeader">

@@ -2,29 +2,32 @@ import {Box, Card, Grid, Heading, Inset, Quote, Section, Strong, Tabs, Text} fro
 
 export default function Scene(){
     return(
-        <Section>
-                <Heading as="h2" align="center" mb="6" mt="8">
+        <Section className="px-3 md:px-0 !py-6 md:!py-8">
+                <Heading as="h2" align="center" className="my-2 md:my-6 !text-xl md:!text-3xl">
                     Use Cases For Free AI Paragraph Generator
                 </Heading>
-                <Tabs.Root defaultValue="account">
+                <Tabs.Root defaultValue="content_creation">
                     <Tabs.List justify="center">
-                        <Tabs.Trigger value="account">
-                            <Heading as="h3" size="4">Use for Content Creation</Heading>
+                        <Tabs.Trigger value="content_creation">
+                            <Heading as="h3" className="!text-lg md:!text-xl"><span className="hidden md:inline">Use for Content </span>Creation</Heading>
                         </Tabs.Trigger>
-                        <Tabs.Trigger value="documents">
-                            <Heading as="h3" size="4">Use for Academic Writing</Heading>
+                        <Tabs.Trigger value="academic_writing">
+                            <Heading as="h3" className="!text-lg md:!text-xl"><span
+                                className="hidden md:inline">Use for </span>Academic<span className="hidden md:inline"> Writing</span></Heading>
                         </Tabs.Trigger>
-                        <Tabs.Trigger value="settings">
-                            <Heading as="h3" size="4">Use for Personal Writing</Heading>
+                        <Tabs.Trigger value="personal_writing">
+                            <Heading as="h3" className="!text-lg md:!text-xl"><span
+                                className="hidden md:inline">Use for </span>Personal<span
+                                className="hidden md:inline"> Writing</span></Heading>
                         </Tabs.Trigger>
                     </Tabs.List>
 
                     <Box pt="3">
-                        <Tabs.Content value="account">
+                        <Tabs.Content value="content_creation">
                             <Heading as="h4" size="3" align="center" my="3">
                                 Quickly generate engaging paragraphs for various types of content.
                             </Heading>
-                            <Grid columns="3" gap="3" width="auto">
+                            <Grid className="grid-cols-1 md:!grid-cols-3" gap="3" width="auto">
                                 <Box>
                                     <Card size="2">
                                         <Inset clip="padding-box" side="top" pb="current">
@@ -101,11 +104,11 @@ export default function Scene(){
                             </Text>
                         </Tabs.Content>
 
-                        <Tabs.Content value="documents">
+                        <Tabs.Content value="academic_writing">
                             <Heading as="h4" size="3" align="center" my="3">
                                 Assist students and researchers in creating well-structured paragraphs.
                             </Heading>
-                            <Grid columns="3" gap="3" width="auto">
+                            <Grid className="grid-cols-1 md:!grid-cols-3" gap="3" width="auto">
                                 <Box>
                                     <Card size="2">
                                         <Inset clip="padding-box" side="top" pb="current">
@@ -181,11 +184,11 @@ export default function Scene(){
                             </Text>
                         </Tabs.Content>
 
-                        <Tabs.Content value="settings">
+                        <Tabs.Content value="personal_writing">
                             <Heading as="h4" size="3" align="center" my="3">
                                 Help individuals compose coherent and well-structured paragraphs for personal communication.
                             </Heading>
-                            <Grid columns="2" gap="3" width="auto">
+                            <Grid className="grid-cols-1 md:!grid-cols-2" gap="3" width="auto">
                                 <Box>
                                     <Card size="2">
                                         <Inset clip="padding-box" side="top" pb="current">

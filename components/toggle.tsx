@@ -78,12 +78,14 @@ const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options, onC
                 disabled={option.paid || false} // 如果是付费的则禁用
             >
                 {option.paid ? (
-                    <span className="flex items-center">
+                    <span className="flex items-center whitespace-nowrap">
                         <LockClosedIcon className="mr-1"/>
                         {option.label}
                     </span>
                 ) : (
-                    option.label
+                    <span className="flex items-center whitespace-nowrap">
+                        {option.label}
+                    </span>
                 )}
             </ToggleGroup.Item>
         ))}

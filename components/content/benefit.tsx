@@ -3,12 +3,12 @@ import {GearIcon, MagicWandIcon, MixerHorizontalIcon, RocketIcon} from "@radix-u
 
 export default function Benefit(){
     return(
-        <Section>
-            <Heading as="h2" align="center" mb="3">Benefits of Using AI Paragraph Generators</Heading>
+        <Section className="px-3 md:px-0 !py-6 md:!py-8">
+            <Heading as="h2" align="center" className="my-2 md:my-6 !text-xl md:!text-3xl">Benefits of Using AI Paragraph Generators</Heading>
             <Text as="p" mb="6">
                 AI Paragraph Generator is a powerful tool for various writing needs, from content creation and academic writing to personal communication. Leveraging advanced AI technology helps users generate high-quality, coherent paragraphs quickly and efficiently.
             </Text>
-            <Grid columns="2" gap="8" width="auto">
+            <Grid className="grid-cols-1 md:!grid-cols-2" gap="8" width="auto">
                 <div className="flex items-center gap-2">
                     <div className="w-1/3 text-center">
                         <RocketIcon width="45" height="45" className="mx-auto mb-2"/>

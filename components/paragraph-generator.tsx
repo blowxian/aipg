@@ -1,9 +1,9 @@
 "use client"
 
-import { Box, Button, Flex, Grid, Kbd, Section, Separator, Spinner, Text, TextArea } from "@radix-ui/themes";
-import { GenerateToggle, LanguageToggle, ParagraphToggle, StyleToggle } from "@/components/toggle";
-import { CopyIcon, EraserIcon, Pencil2Icon } from "@radix-ui/react-icons";
-import { useState, useEffect, useCallback, useRef } from "react";
+import {Box, Button, Flex, Grid, Kbd, Section, Separator, Spinner, Text, TextArea} from "@radix-ui/themes";
+import {GenerateToggle, LanguageToggle, ParagraphToggle, StyleToggle} from "@/components/toggle";
+import {CopyIcon, EraserIcon, Pencil2Icon} from "@radix-ui/react-icons";
+import {useState, useEffect, useCallback, useRef} from "react";
 import ToastComponent from '@/components/toast';
 import useDeviceInfo from '@/hooks/useDeviceInfo'; // 导入检测设备信息的 Hook
 
@@ -20,7 +20,7 @@ export default function ParagraphGenerator() {
     const [toastMessage, setToastMessage] = useState('');
     const textAreaRef = useRef(null);
 
-    const { deviceType, os } = useDeviceInfo(); // 使用检测设备信息的 Hook
+    const {deviceType, os} = useDeviceInfo(); // 使用检测设备信息的 Hook
 
     const wordCount = message.length;
     const responseWordCount = response.length;
@@ -127,27 +127,27 @@ export default function ParagraphGenerator() {
 
 
     return (
-        <Section className="overflow-x-hidden">
-            <Flex direction="column" className="border rounded-lg p-3">
+        <Section className="overflow-x-hidden !py-3 md:!py-8">
+            <Flex direction="column" className="border-0 md:border rounded-lg p-3">
                 <Flex>
-                    <StyleToggle onChange={setStyle} />
+                    <StyleToggle onChange={setStyle}/>
                 </Flex>
                 <Flex>
-                    <ParagraphToggle onChange={setParagraph} />
+                    <ParagraphToggle onChange={setParagraph}/>
                 </Flex>
                 <Flex>
-                    <LanguageToggle onChange={setLanguage} />
+                    <LanguageToggle onChange={setLanguage}/>
                 </Flex>
                 <Flex>
-                    <GenerateToggle onChange={setGenerate} />
+                    <GenerateToggle onChange={setGenerate}/>
                 </Flex>
-                <Grid columns="2" gap="6">
+                <Grid gap="6" className="grid-cols-1 md:!grid-cols-2">
                     <Box>
                         <div className="relative">
                             <TextArea
                                 ref={textAreaRef}
                                 variant="soft"
-                                className="h-48"
+                                className="h-36 md:h-48"
                                 placeholder="e.g. Write a paragraph on Research on the history of the internet"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
@@ -161,7 +161,7 @@ export default function ParagraphGenerator() {
                             <Flex className="gap-3 items-center">
                                 <Button variant="outline" onClick={handleClear} disabled={isLoading}>
                                     <Spinner loading={isLoading}>
-                                        <EraserIcon />
+                                        <EraserIcon/>
                                     </Spinner>
                                     Clean
                                 </Button>
@@ -171,7 +171,7 @@ export default function ParagraphGenerator() {
                                 {renderGenerateShortcut()}
                                 <Button onClick={handleSubmit} disabled={isLoading}>
                                     <Spinner loading={isLoading}>
-                                        <Pencil2Icon />
+                                        <Pencil2Icon/>
                                     </Spinner>
                                     Generate
                                 </Button>
@@ -179,15 +179,18 @@ export default function ParagraphGenerator() {
                         </Flex>
                     </Box>
                     <Box>
-                        <Text as="p" className="h-48 overflow-y-scroll whitespace-pre-wrap">
-                            {response}
-                        </Text>
+                        <div className="relative">
+                            <Text as="p" className="h-36 md:h-48 overflow-y-scroll whitespace-pre-wrap">
+                                {response}
+                            </Text>
+                            <Text className="absolute bottom-2 right-2 text-sm text-gray-500">{responseWordCount} chars</Text>
+                        </div>
                         <Flex mt="3" justify="end" align="center" className="gap-3 items-center">
-                            <Text className="text-sm text-gray-500 mr-2">{responseWordCount} chars</Text>
+
                             {renderCopyShortcut()}
                             <Button variant="soft" onClick={handleCopy} disabled={isLoading}>
                                 <Spinner loading={isLoading}>
-                                    <CopyIcon />
+                                    <CopyIcon/>
                                 </Spinner>
                                 Copy
                             </Button>
@@ -195,7 +198,8 @@ export default function ParagraphGenerator() {
                     </Box>
                 </Grid>
             </Flex>
-            <ToastComponent message={toastMessage} />
-        </Section>
-    );
+            <ToastComponent message={toastMessage}/>
+</Section>
+)
+    ;
 }
