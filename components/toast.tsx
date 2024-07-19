@@ -1,7 +1,11 @@
 import * as React from 'react';
 import * as Toast from '@radix-ui/react-toast';
 
-const ToastComponent = ({ message }) => {
+interface ToastComponentProps {
+    message: string;
+}
+
+const ToastComponent: React.FC<ToastComponentProps> = ({ message }) => {
     const [open, setOpen] = React.useState(false);
     const [toastMessage, setToastMessage] = React.useState(message);
     const timerRef = React.useRef<number>(0);

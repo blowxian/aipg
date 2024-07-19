@@ -3,7 +3,7 @@
 import {Box, Button, Flex, Grid, Kbd, Section, Separator, Spinner, Text, TextArea} from "@radix-ui/themes";
 import {GenerateToggle, LanguageToggle, ParagraphToggle, StyleToggle} from "@/components/toggle";
 import {CopyIcon, EraserIcon, Pencil2Icon} from "@radix-ui/react-icons";
-import {useState, useEffect, useCallback, useRef} from "react";
+import {useState, useEffect, useCallback, useRef, FormEvent} from "react";
 import ToastComponent from '@/components/toast';
 import useDeviceInfo from '@/hooks/useDeviceInfo'; // 导入检测设备信息的 Hook
 
@@ -25,7 +25,7 @@ export default function ParagraphGenerator() {
     const wordCount = message.length;
     const responseWordCount = response.length;
 
-    const handleSubmit = useCallback(async (e) => {
+    const handleSubmit = useCallback(async (e: FormEvent) => {
         e.preventDefault();
         setResponse('');
         setIsLoading(true);
@@ -63,7 +63,7 @@ export default function ParagraphGenerator() {
     const handleClear = useCallback(() => {
         setMessage('');
         if (textAreaRef.current) {
-            textAreaRef.current.focus();
+            (textAreaRef.current as any).focus();
         }
         setToastMessage('Message cleared');
     }, []);
@@ -79,14 +79,14 @@ export default function ParagraphGenerator() {
     }, [response]);
 
     useEffect(() => {
-        const handleKeyDown = (event) => {
+        const handleKeyDown = (event: KeyboardEvent) => {
             if (isLoading) {
                 return;
             }
 
             if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
                 event.preventDefault();
-                handleSubmit(event);
+                handleSubmit(event as any);
             }
             if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
                 event.preventDefault();

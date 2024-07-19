@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Logo from "./logo";
-import {Flex} from "@radix-ui/themes";
-import {useEffect, useState} from "react";
+import { Flex } from "@radix-ui/themes";
+import { useEffect, useState } from "react";
 
 // 定义用户信息的类型
 interface User {
@@ -11,12 +11,17 @@ interface User {
     avatar: string;
 }
 
+// 定义 Google 登录响应的类型
+interface GoogleLoginResponse {
+    credential: string;
+}
+
 export default function Header() {
     const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            (window as any).googleLoginCallback = (response) => {
+            (window as any).googleLoginCallback = (response: GoogleLoginResponse) => {
                 const credential = response.credential;
                 console.log('Credential:', credential);
 
@@ -44,7 +49,7 @@ export default function Header() {
                     className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-white/90 px-5 shadow shadow-black/[0.03] backdrop-blur-sm before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(theme(colors.gray.100),theme(colors.gray.200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
                     {/* Site branding */}
                     <div className="flex items-center">
-                        <Logo/>
+                        <Logo />
                     </div>
 
                     <Flex justify="center" gap="8">
@@ -56,7 +61,7 @@ export default function Header() {
                         {user ? (
                             <div className="relative">
                                 <img src={user.avatar} alt="User Avatar"
-                                     className="w-8 h-8 rounded-full"/>
+                                     className="w-8 h-8 rounded-full" />
                             </div>
                         ) : (
                             <>
