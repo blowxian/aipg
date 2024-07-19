@@ -9,11 +9,11 @@ export default function Highlight() {
                 provide a starting point and help organize thoughts into coherent paragraphs.
             </Text>
             <Blockquote mb="3">
-                <Quote>Using Ahrefs&apos; Paragraph Generator for personal writing can save time and ensure that your
+                <Quote>Using AI&apos; Paragraph Generator for personal writing can save time and ensure that your
                     communication is clear and impactful.</Quote>
             </Blockquote>
             <Text as="p">
-                The Technology Behind Ahrefs&apos; Paragraph Generator
+                The Technology Behind AI&apos; Paragraph Generator
             </Text>
             <Heading as="h3" align="center" className="my-2 md:my-6 !text-xl md:!text-2xl"><Em>Advanced AI Technology</Em></Heading>
             <Text as="p">
@@ -31,7 +31,7 @@ export default function Highlight() {
                 adapting to different writing styles and tones.
             </Text>
             <Blockquote mb="3">
-                <Quote>The technology behind Ahrefs&apos; Paragraph Generator combines advanced NLP and machine learning
+                <Quote>The technology behind AI&apos; Paragraph Generator combines advanced NLP and machine learning
                     to produce high-quality, coherent paragraphs.</Quote>
             </Blockquote>
         </Section>

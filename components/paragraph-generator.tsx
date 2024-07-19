@@ -1,9 +1,9 @@
 "use client"
 
-import {Box, Button, Flex, Grid, Kbd, Section, Separator, Spinner, Text, TextArea} from "@radix-ui/themes";
+import {Box, Button, Flex, Grid, Kbd, Section, Spinner, Text, TextArea} from "@radix-ui/themes";
 import {GenerateToggle, LanguageToggle, ParagraphToggle, StyleToggle} from "@/components/toggle";
 import {CopyIcon, EraserIcon, Pencil2Icon} from "@radix-ui/react-icons";
-import {useState, useEffect, useCallback, useRef, FormEvent} from "react";
+import {FormEvent, useCallback, useEffect, useRef, useState} from "react";
 import ToastComponent from '@/components/toast';
 import useDeviceInfo from '@/hooks/useDeviceInfo'; // 导入检测设备信息的 Hook
 
@@ -152,6 +152,7 @@ export default function ParagraphGenerator() {
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
                                 maxLength={maxLength * 6}
+                                size="3"
                             />
                             <div className="absolute bottom-2 left-2 text-sm text-gray-500">
                                 {wordCount} / {maxLength} chars
@@ -179,14 +180,11 @@ export default function ParagraphGenerator() {
                         </Flex>
                     </Box>
                     <Box>
-                        <div className="relative">
-                            <Text as="p" className="h-36 md:h-48 overflow-y-scroll whitespace-pre-wrap">
-                                {response}
-                            </Text>
-                            <Text className="absolute bottom-2 right-2 text-sm text-gray-500">{responseWordCount} chars</Text>
-                        </div>
+                        <Text as="p" className="h-48 overflow-y-scroll whitespace-pre-wrap">
+                            {response}
+                        </Text>
                         <Flex mt="3" justify="end" align="center" className="gap-3 items-center">
-
+                            <Text className="text-sm text-gray-500 mr-2">{responseWordCount} chars</Text>
                             {renderCopyShortcut()}
                             <Button variant="soft" onClick={handleCopy} disabled={isLoading}>
                                 <Spinner loading={isLoading}>
