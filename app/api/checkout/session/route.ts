@@ -17,8 +17,8 @@ export async function POST(req: NextRequest) {
     let priceId: string;
     switch (plan) {
         case 'weekly':
-            priceId = 'price_1Pea9ERsqc5wnJW18S6sgHcZ';
-            // priceId = 'price_1PeG9pRsqc5wnJW1RfOnOBHn';  // 周度订阅的 price_id
+            // priceId = 'price_1Pea9ERsqc5wnJW18S6sgHcZ';
+            priceId = 'price_1PeG9pRsqc5wnJW1RfOnOBHn';  // 周度订阅的 price_id
             break;
         case 'monthly':
             priceId = 'price_1PeGAoRsqc5wnJW1aIvVyDCy';  // 月度订阅的 price_id
