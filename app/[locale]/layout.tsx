@@ -5,8 +5,6 @@ import Script from "next/script";
 import {Theme} from '@radix-ui/themes';
 import "@radix-ui/themes/styles.css"
 import "../css/style.css";
-import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
 
 export const metadata: Metadata = {
     title: "AI Paragraph Generator for writer",
@@ -30,9 +28,7 @@ export default async function LocaleLayout({
         <body>
         <Theme accentColor="violet">
             <NextIntlClientProvider messages={messages}>
-                <Header/>
                 {children}
-                <Footer border={true}/>
             </NextIntlClientProvider>
             {/*<ThemePanel />*/}
         </Theme>

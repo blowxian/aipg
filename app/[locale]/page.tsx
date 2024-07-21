@@ -7,12 +7,15 @@ import Overcome from "@/components/content/overcome";
 import FAQ from "@/components/content/faq";
 import ParagraphGenerator from "@/components/paragraph-generator";
 import Price from "@/components/content/price";
+import Footer from "@/components/ui/footer";
+import Header from "@/components/ui/header";
 
 export default function Home() {
     const t = useTranslations('Index' as any);
 
     return (
         <Container>
+            <Header/>
             <Section id="generator" className="!pb-3 md:!pb-12">
                 <Heading as="h1" align="center" className="mt-3 md:mt-9 !text-xl md:!text-6xl">{t("title" as any)}</Heading>
                 <Heading as="h2" align="center"
@@ -26,6 +29,7 @@ export default function Home() {
             <Overcome/>
             <FAQ/>
             <Price/>
+            <Footer border={true}/>
         </Container>
     );
 }
