@@ -1,5 +1,10 @@
 {
-  "Index": {
-    "title": "AI Paragraph Generator for writer"
+  "Home": {
+    "title": "AI Paragraph Generator for writers",
+    "subtitle": "The Most Powerful AI Paragraph Generator Online"
+  },
+  "Header": {
+    "generator": "Generator",
+    "price": "Price"
   }
 }

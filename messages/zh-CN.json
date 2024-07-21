@@ -1,5 +1,10 @@
 {
-  "Index": {
-    "title": "AI 内容生成器"
+  "Home": {
+    "title": "AI段落生成器",
+    "subtitle": "最强大的在线AI段落生成器"
+  },
+  "Header": {
+    "generator": "生成器",
+    "price": "价格"
   }
 }

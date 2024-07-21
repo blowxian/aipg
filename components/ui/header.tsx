@@ -6,6 +6,7 @@ import Logo from "./logo";
 import {Flex} from "@radix-ui/themes";
 import {useEffect, useState} from "react";
 import Cookies from "js-cookie";
+import {useTranslations} from "next-intl";
 
 // 定义用户信息的类型
 interface User {
@@ -20,6 +21,7 @@ interface GoogleLoginResponse {
 }
 
 export default function Header() {
+    const t = useTranslations('Header' as any);
     const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
@@ -90,8 +92,8 @@ export default function Header() {
                     </div>
 
                     <Flex justify="center" gap="8">
-                        <Link href="#generator">Generator</Link>
-                        <Link href="#price">Price</Link>
+                        <Link href="#generator">{t("generator" as any)}</Link>
+                        <Link href="#price">{t("price" as any)}</Link>
                     </Flex>
 
                     <Flex>

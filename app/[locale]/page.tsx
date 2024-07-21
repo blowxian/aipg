@@ -11,7 +11,7 @@ import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 
 export default function Home() {
-    const t = useTranslations('Index' as any);
+    const t = useTranslations('Home' as any);
 
     return (
         <>
@@ -21,8 +21,7 @@ export default function Home() {
                     <Heading as="h1" align="center"
                              className="mt-3 md:mt-9 !text-xl md:!text-6xl">{t("title" as any)}</Heading>
                     <Heading as="h2" align="center"
-                             className="mt-0 md:mt-2 !text-xs md:!text-xl !text-gray-500 !font-light !italic">The Most
-                        Powerful AI Paragraph Generator Online</Heading>
+                             className="mt-0 md:mt-2 !text-xs md:!text-xl !text-gray-500 !font-light !italic">{t("subtitle" as any)}</Heading>
                 </Section>
                 <ParagraphGenerator/>
                 <Scene/>
