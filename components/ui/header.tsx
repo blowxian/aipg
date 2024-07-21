@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Logo from "./logo";
 import {Flex} from "@radix-ui/themes";
 import {useEffect, useState} from "react";
@@ -96,8 +97,13 @@ export default function Header() {
                     <Flex>
                         {user ? (
                             <div className="relative">
-                                <img src={user.avatar} alt="User Avatar"
-                                     className="w-8 h-8 rounded-full" />
+                                <Image
+                                    src={user.avatar}
+                                    alt="User Avatar"
+                                    width={32}
+                                    height={32}
+                                    className="w-8 h-8 rounded-full"
+                                />
                             </div>
                         ) : (
                             <>

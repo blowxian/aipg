@@ -18,20 +18,20 @@ export async function GET(req: NextRequest) {
         const session = await stripe.checkout.sessions.retrieve(session_id);
         if (session.payment_status === 'paid') {
             // 从 session metadata 获取 userId，并确保它是整数
-            const userId = session.metadata.userId;
+            const userId = session.metadata?.userId;
 
             console.log('userId:', userId);
 
             // 检查用户是否已有订阅
             const existingSubscription = await prisma.subscription.findFirst({
-                where: {userId: userId.toString()}
+                where: {userId: userId}
             });
 
             if (!existingSubscription) {
                 // 创建新的订阅记录
                 await prisma.subscription.create({
                     data: {
-                        userId: userId.toString(),
+                        userId: userId as string,
                         planVersion: 'Standard', // 假设订阅级别为 "Standard"
                         aipgQuota: 1000, // 假设配额为 1000
                         expiryDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 订阅期限为一个月

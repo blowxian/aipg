@@ -3,7 +3,7 @@
 import Stripe from 'stripe';
 import {NextRequest, NextResponse} from 'next/server';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
 export async function POST(req: NextRequest) {
     const formData = await req.formData();  // 获取 POST 请求体中的 userId 和 plan

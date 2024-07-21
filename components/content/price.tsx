@@ -15,12 +15,14 @@ const Price: React.FC = () => {
     })();
 
     return (
-        <section className="bg-white dark:bg-gray-900 px-3 md:px-0 !py-3 md:!py-8" id="price">
+        <section className="bg-white dark:bg-gray-900 px-3 md:px-0 !pb-3 !pt-8 md:!pb-8" id="price">
             <div className="py-8 px-0 mx-auto max-w-screen-xl lg:py-16 lg:px-2">
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Choose the
+                    <h2 className="mt-3 text-xl md:text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white">Choose
+                        the
                         plan that suits your needs</h2>
-                    <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Our plans are designed to
+                    <p className="mt-0 md:mt-2 !text-xs md:!text-xl !text-gray-500 !font-light !italic">Our plans are
+                        designed to
                         provide the best features at affordable prices.</p>
                 </div>
                 <div className="space-y-8 lg:grid lg:grid-cols-4 sm:gap-2 xl:gap-4 lg:space-y-0">
