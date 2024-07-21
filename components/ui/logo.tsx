@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Logo() {
     return (
-        <Link href="/" className="inline-flex" aria-label="Cruip">
+        <Link href="/" className="inline-flex" aria-label="Coogle">
             <svg xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" strokeLinejoin="round"
                  strokeMiterlimit="2" clipRule="evenodd" width="28" height="28" viewBox="0 0 390 255">
                 <path

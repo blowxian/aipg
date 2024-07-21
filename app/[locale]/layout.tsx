@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import Script from "next/script";
-import {Theme, ThemePanel} from '@radix-ui/themes';
+import {Theme} from '@radix-ui/themes';
 import "@radix-ui/themes/styles.css"
 import "../css/style.css";
 import Header from "@/components/ui/header";
@@ -36,9 +36,6 @@ export default async function LocaleLayout({
             </NextIntlClientProvider>
             {/*<ThemePanel />*/}
         </Theme>
-        <Script src="https://accounts.google.com/gsi/client"
-                strategy="afterInteractive"
-        />
         <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
             strategy="afterInteractive"

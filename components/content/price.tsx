@@ -1,6 +1,19 @@
 import {Button} from '@radix-ui/themes';
+import {useLocale} from 'next-intl';
+import {cookies} from 'next/headers';
 
 const Price: React.FC = () => {
+    const locale = useLocale();
+
+    // 从 cookie 中获取用户信息并解析
+    const storedUserID = (() => {
+        try {
+            return JSON.parse(cookies().get('user' as any)?.value || '{}').id || null;
+        } catch {
+            return null;
+        }
+    })();
+
     return (
         <section className="bg-white dark:bg-gray-900 px-3 md:px-0 !py-3 md:!py-8" id="price">
             <div className="py-8 px-0 mx-auto max-w-screen-xl lg:py-16 lg:px-2">
@@ -19,7 +32,7 @@ const Price: React.FC = () => {
                         duration="/month"
                         features={[
                             "Generate Paragraphs: 1-2 at once",
-                            "Paragraphs Limit: 6 paragraphs per day",
+                            "Paragraphs Limit: 6 paragraphs / D",
                             "Language: English",
                             "Speed: Fast",
                             "Tones: 3",
@@ -33,6 +46,7 @@ const Price: React.FC = () => {
                             "Support: Basic",
                             "Ads & Captcha: Yes"
                         ]}
+                        payLink="#"
                         buttonText="Get started"
                     />
                     {/* Weekly Plan */}
@@ -43,7 +57,7 @@ const Price: React.FC = () => {
                         duration="/week"
                         features={[
                             "Generate Paragraphs: 1-5 at once",
-                            "Paragraphs Limit: 50 paragraphs per week",
+                            "Paragraphs Limit: 50 paragraphs / W",
                             "Language: 5+",
                             "Speed: 2x faster",
                             "Tones: 5",
@@ -57,6 +71,7 @@ const Price: React.FC = () => {
                             "Support: Priority",
                             "Ads & Captcha: No"
                         ]}
+                        payLink={`/${locale}/checkout?userId=${storedUserID}&plan=weekly`}
                         buttonText="Get started"
                     />
                     {/* Monthly Plan */}
@@ -82,6 +97,7 @@ const Price: React.FC = () => {
                             "Support: 24x7",
                             "Ads & Captcha: No"
                         ]}
+                        payLink={`/${locale}/checkout?userId=${storedUserID}&plan=monthly`}
                         buttonText="Get started"
                     />
                     {/* Yearly Plan */}
@@ -107,6 +123,7 @@ const Price: React.FC = () => {
                             "Support: 24x7",
                             "Ads & Captcha: No"
                         ]}
+                        payLink={`/${locale}/checkout?userId=${storedUserID}&plan=yearly`}
                         buttonText="Get started"
                     />
                 </div>
@@ -121,8 +138,9 @@ const PlanCard: React.FC<{
     originalPrice: string,
     duration: string,
     features: string[],
+    payLink: string,
     buttonText: string
-}> = ({title, price, originalPrice, duration, features, buttonText}) => {
+}> = ({title, price, originalPrice, duration, features, payLink, buttonText}) => {
     return (
         <div
             className="flex flex-col p-3 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-4 dark:bg-gray-800 dark:text-white">
@@ -135,7 +153,8 @@ const PlanCard: React.FC<{
                 <span className="mr-2 text-5xl font-extrabold">{price}</span>
                 <span className="text-gray-500 dark:text-gray-400">{duration}</span>
             </div>
-            <Button size="3" asChild><a href="#">{buttonText}</a></Button>
+            <Button size="3" asChild><a href={payLink}
+                                        target={payLink !== "#" ? "_blank" : ""}>{buttonText}</a></Button>
             <ul role="list" className="mt-8 space-y-1 text-left text-xs">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">

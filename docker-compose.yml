@@ -9,3 +9,14 @@ services:
     environment:
       NODE_ENV: production
     restart: always
+  aipg_db:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: aipg_admin
+      POSTGRES_PASSWORD: aipg_2024
+      POSTGRES_DB: aipg
+    volumes:
+      - ./data:/var/lib/postgresql/data                           # 持久化数据
+    container_name: aipg_db

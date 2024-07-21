@@ -16,7 +16,7 @@ export default function Overcome() {
             <Text as="p">
                 How to Use an AI Paragraph Generator Effectively
             </Text>
-            <Grid className="grid-cols-1 md:!grid-cols-2" gap="3" width="auto">
+            <Grid className="grid-cols-1 md:!grid-cols-3" gap="3" width="auto">
                 <Box>
                     <Heading as="h3" align="center" className="my-2 md:my-6 !text-xl md:!text-2xl"><Em>Provide Clear
                         Prompts</Em></Heading>
@@ -34,14 +34,19 @@ export default function Overcome() {
                         AI-generated content may require fact-checking and refinement.
                     </Text>
                 </Box>
+                <Box>
+                    <Heading as="h3" align="center" className="my-2 md:my-6 !text-xl md:!text-2xl"><Em>Use as a
+                        Supplement</Em></Heading>
+                    <Text as="p" mb="3">
+                        Use the tool to supplement your writing process, not a complete replacement for human creativity
+                        and
+                        expertise. AI can assist but should not replace the unique insights and personal touch that
+                        human
+                        writers bring.
+                    </Text>
+                </Box>
             </Grid>
-            <Heading as="h3" align="center" className="my-2 md:my-6 !text-xl md:!text-2xl"><Em>Use as a Supplement</Em></Heading>
-            <Text as="p" mb="3">
-                Use the tool to supplement your writing process, not a complete replacement for human creativity and
-                expertise. AI can assist but should not replace the unique insights and personal touch that human
-                writers bring.
-            </Text>
-            <Blockquote mb="3">
+            <Blockquote my="3">
                 <Quote>Using AI paragraph generators effectively involves providing clear prompts, reviewing and
                     editing the content, and using the tool to supplement human creativity.</Quote>
             </Blockquote>

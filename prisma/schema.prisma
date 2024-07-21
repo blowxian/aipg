@@ -1,0 +1,60 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id               String         @id @default(uuid())
+  email            String         @unique
+  name             String?
+  profileImage     String?
+  registeredAt     DateTime       @default(now())
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  dailyUsageCount  Int            @default(0)
+  lastUsageDate    DateTime?
+  sessions         UserSession[]  @relation("UserSessions")
+  aipgUsageRecords AipgUsage[]    @relation("UserAipgUsages")
+  subscriptions    Subscription[] @relation("UserSubscriptions")
+}
+
+model UserSession {
+  id         String    @id @default(uuid())
+  userId     String
+  user       User      @relation("UserSessions", fields: [userId], references: [id])
+  loginTime  DateTime  @default(now())
+  logoutTime DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model AipgUsage {
+  id                String   @id @default(uuid())
+  userId            String
+  user              User     @relation("UserAipgUsages", fields: [userId], references: [id])
+  inputMessage      String
+  selectedStyle     String
+  selectedParagraph String
+  selectedLanguage  String
+  generationType    String
+  generatedContent  String
+  inputCharCount    Int
+  outputCharCount   Int
+  createdAt         DateTime @default(now())
+}
+
+model Subscription {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation("UserSubscriptions", fields: [userId], references: [id])
+  planVersion String
+  aipgQuota   Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  expiryDate  DateTime
+  isActive    Boolean  @default(true)
+}
