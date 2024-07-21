@@ -1,18 +1,37 @@
+'use client';
+
 import {Button} from '@radix-ui/themes';
 import {useLocale} from 'next-intl';
-import {cookies} from 'next/headers';
+import Cookies from 'js-cookie';
+import {useState} from 'react';
 
 const Price: React.FC = () => {
     const locale = useLocale();
+    const [userID, setUserID] = useState<string | null>(getUserIDFromCookies());
 
-    // 从 cookie 中获取用户信息并解析
-    const storedUserID = (() => {
+    function getUserIDFromCookies() {
         try {
-            return JSON.parse(cookies().get('user' as any)?.value || '{}').id || null;
+            return JSON.parse((Cookies.get('user') || '{}') as any).id || null;
         } catch {
             return null;
         }
-    })();
+    }
+
+    function handlePayLinkClick(plan: string) {
+        let currentUserID = userID;
+
+        if (!currentUserID) {
+            currentUserID = getUserIDFromCookies();
+            if (currentUserID) {
+                setUserID(currentUserID);
+            } else {
+                alert('Please log in to proceed.');
+                return;
+            }
+        }
+
+        window.location.href = `/${locale}/checkout?userId=${currentUserID}&plan=${plan}`;
+    }
 
     return (
         <section className="bg-white px-3 md:px-0 !pb-3 !pt-8 md:!pb-8" id="price">
@@ -26,7 +45,6 @@ const Price: React.FC = () => {
                         provide the best features at affordable prices.</p>
                 </div>
                 <div className="space-y-8 lg:grid lg:grid-cols-4 sm:gap-2 xl:gap-4 lg:space-y-0">
-                    {/* Free Plan */}
                     <PlanCard
                         title="Free"
                         price="$0"
@@ -48,10 +66,9 @@ const Price: React.FC = () => {
                             "Support: Basic",
                             "Ads & Captcha: Yes"
                         ]}
-                        payLink="#"
+                        handlePayLinkClick={() => window.location.hash = 'generator'}
                         buttonText="Get started"
                     />
-                    {/* Weekly Plan */}
                     <PlanCard
                         title="Weekly"
                         price="$4"
@@ -73,10 +90,9 @@ const Price: React.FC = () => {
                             "Support: Priority",
                             "Ads & Captcha: No"
                         ]}
-                        payLink={`/${locale}/checkout?userId=${storedUserID}&plan=weekly`}
+                        handlePayLinkClick={() => handlePayLinkClick('weekly')}
                         buttonText="Get started"
                     />
-                    {/* Monthly Plan */}
                     <PlanCard
                         title="Monthly"
                         price="$8"
@@ -99,10 +115,9 @@ const Price: React.FC = () => {
                             "Support: 24x7",
                             "Ads & Captcha: No"
                         ]}
-                        payLink={`/${locale}/checkout?userId=${storedUserID}&plan=monthly`}
+                        handlePayLinkClick={() => handlePayLinkClick('monthly')}
                         buttonText="Get started"
                     />
-                    {/* Yearly Plan */}
                     <PlanCard
                         title="Yearly"
                         price="$68"
@@ -125,7 +140,7 @@ const Price: React.FC = () => {
                             "Support: 24x7",
                             "Ads & Captcha: No"
                         ]}
-                        payLink={`/${locale}/checkout?userId=${storedUserID}&plan=yearly`}
+                        handlePayLinkClick={() => handlePayLinkClick('yearly')}
                         buttonText="Get started"
                     />
                 </div>
@@ -140,23 +155,21 @@ const PlanCard: React.FC<{
     originalPrice: string,
     duration: string,
     features: string[],
-    payLink: string,
+    handlePayLinkClick: () => void,
     buttonText: string
-}> = ({title, price, originalPrice, duration, features, payLink, buttonText}) => {
+}> = ({title, price, originalPrice, duration, features, handlePayLinkClick, buttonText}) => {
     return (
         <div
             className="flex flex-col p-3 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-4">
             <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
             <div className="flex justify-center items-baseline my-8">
                 {originalPrice && (
-                    <span
-                        className="text-gray-500 line-through mr-1">{originalPrice}</span>
+                    <span className="text-gray-500 line-through mr-1">{originalPrice}</span>
                 )}
                 <span className="mr-2 text-5xl font-extrabold">{price}</span>
                 <span className="text-gray-500">{duration}</span>
             </div>
-            <Button size="3" asChild><a href={payLink}
-                                        target={payLink !== "#" ? "_blank" : ""}>{buttonText}</a></Button>
+            <Button size="3" onClick={handlePayLinkClick}>{buttonText}</Button>
             <ul role="list" className="mt-8 space-y-1 text-left text-xs">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center space-x-3">
