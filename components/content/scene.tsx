@@ -2,8 +2,8 @@ import {Box, Card, Grid, Heading, Inset, Quote, Section, Strong, Tabs, Text} fro
 
 export default function Scene(){
     return(
-        <Section className="px-3 md:px-0 !py-6 md:!py-8">
-                <Heading as="h2" align="center" className="my-2 md:my-6 !text-xl md:!text-3xl">
+        <Section className="px-3 md:px-0 !py-6 md:!py-8" id="case">
+            <Heading as="h2" align="center" className="my-2 md:my-6 pt-10 md:pt-12 !text-xl md:!text-3xl">
                     Use Cases For Free AI Paragraph Generator
                 </Heading>
                 <Tabs.Root defaultValue="content_creation">

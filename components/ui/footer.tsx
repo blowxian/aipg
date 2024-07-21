@@ -26,15 +26,15 @@ export default function Footer({border = false}: { border?: boolean }) {
                             <li>
                                 <Link
                                     className="text-gray-600 transition hover:text-gray-900"
-                                    href="#0"
+                                    href="#case"
                                 >
-                                    Features
+                                    Cases
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     className="text-gray-600 transition hover:text-gray-900"
-                                    href="#0"
+                                    href="#price"
                                 >
                                     Pricing & Plans
                                 </Link>
@@ -107,7 +107,7 @@ export default function Footer({border = false}: { border?: boolean }) {
             </div>
 
             {/* Big text */}
-            <div className="relative -mt-16 h-60 w-full" aria-hidden="true">
+            <div className="relative -mt-12 h-60 w-full" aria-hidden="true">
                 <div
                     className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-gradient-to-b before:from-gray-200 before:to-gray-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['Coogle'] after:absolute after:inset-0 after:bg-gray-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['Coogle'] after:[text-shadow:0_1px_0_white]"></div>
                 {/* Glow */}
