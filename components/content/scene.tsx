@@ -32,7 +32,7 @@ export default function Scene(){
                                     <Card size="2" className="h-full">
                                         <Inset clip="padding-box" side="top" pb="current">
                                             <img
-                                                src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                                                src="/img/blogging.svg"
                                                 alt="Bold typography"
                                                 style={{
                                                     display: 'block',
@@ -55,7 +55,7 @@ export default function Scene(){
                                     <Card size="2" className="h-full">
                                         <Inset clip="padding-box" side="top" pb="current">
                                             <img
-                                                src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                                                src="/img/articles.svg"
                                                 alt="Bold typography"
                                                 style={{
                                                     display: 'block',
@@ -78,7 +78,7 @@ export default function Scene(){
                                     <Card size="2" className="h-full">
                                         <Inset clip="padding-box" side="top" pb="current">
                                             <img
-                                                src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                                                src="/img/product-description.svg"
                                                 alt="Bold typography"
                                                 style={{
                                                     display: 'block',
@@ -113,7 +113,7 @@ export default function Scene(){
                                     <Card size="2" className="h-full">
                                         <Inset clip="padding-box" side="top" pb="current">
                                             <img
-                                                src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                                                src="/img/essays.svg"
                                                 alt="Bold typography"
                                                 style={{
                                                     display: 'block',
@@ -136,7 +136,7 @@ export default function Scene(){
                                     <Card size="2" className="h-full">
                                         <Inset clip="padding-box" side="top" pb="current">
                                             <img
-                                                src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                                                src="/img/research-articles.svg"
                                                 alt="Bold typography"
                                                 style={{
                                                     display: 'block',
@@ -159,7 +159,7 @@ export default function Scene(){
                                     <Card size="2" className="h-full">
                                         <Inset clip="padding-box" side="top" pb="current">
                                             <img
-                                                src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                                                src="/img/papers.svg"
                                                 alt="Bold typography"
                                                 style={{
                                                     display: 'block',
@@ -193,7 +193,7 @@ export default function Scene(){
                                     <Card size="2" className="h-full">
                                         <Inset clip="padding-box" side="top" pb="current">
                                             <img
-                                                src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                                                src="/img/emails.svg"
                                                 alt="Bold typography"
                                                 style={{
                                                     display: 'block',
@@ -216,7 +216,7 @@ export default function Scene(){
                                     <Card size="2" className="h-full">
                                         <Inset clip="padding-box" side="top" pb="current">
                                             <img
-                                                src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                                                src="/img/personal-letters.svg"
                                                 alt="Bold typography"
                                                 style={{
                                                     display: 'block',
