@@ -8,8 +8,7 @@ import "../css/style.css";
 
 export const metadata: Metadata = {
     title: "AI Paragraph Generator for writer",
-    description: "AI Paragraph Generator is a powerful tool that transforms your ideas into well-structured and engaging paragraphs. Artificial Intelligence Paragraph Generator meets all your content needs, from blogs to academic papers, with our tool ensuring originality, relevance and professionalism in every use case.",
-    keywords: "AI Paragraph Generator, AI Writing Assistant, Content Creation Tool, Automated Writing Software, Natural Language Processing, Machine Learning Writing Tool, Creative Writing AI, Technical Documentation AI, Academic Research AI Assistant, Business Writing AI, SEO Optimized Content, Free AI Writing Tool"
+    description: "AI Paragraph Generator is a powerful tool that transforms your ideas into well-structured and engaging paragraphs. Artificial Intelligence Paragraph Generator meets all your content needs, from blogs to academic papers, with our tool ensuring originality, relevance and professionalism in every use case."
 };
 
 export default async function LocaleLayout({
