@@ -19,6 +19,7 @@ export default function ParagraphGenerator() {
     const [response, setResponse] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
+    const [toastDescription, setToastDescription] = useState('');
     const textAreaRef = useRef(null);
     const [updateTrigger, setUpdateTrigger] = useState(false); // 新增状态用于触发更新
 
@@ -27,10 +28,15 @@ export default function ParagraphGenerator() {
     const wordCount = message.length;
     const responseWordCount = response.length;
 
+    const showToast = (message: string, description?: string) => {
+        setToastMessage(message);
+        setToastDescription(description as string);
+    };
+
     const checkLoginStatus = useCallback(() => {
         const userInfo = Cookies.get('user'); // 假设 'user' cookie 存储用户信息
         if (!userInfo) {
-            setToastMessage('Please log in to use the paragraph generator.');
+            showToast('Please log in to use the paragraph generator.');
         } else {
         }
         return !!userInfo;
@@ -39,13 +45,13 @@ export default function ParagraphGenerator() {
     const handleSubmit = useCallback(async (e: FormEvent) => {
         e.preventDefault();
 
-        if (!checkLoginStatus()) {
+        /*if (!checkLoginStatus()) {
             return;
-        }
+        }*/
 
         setResponse('');
         setIsLoading(true);
-        setToastMessage('Generating paragraph...');
+        showToast('Generating paragraph...');
 
         const params = new URLSearchParams({
             message: message,
@@ -63,15 +69,26 @@ export default function ParagraphGenerator() {
         };
 
         eventSource.onerror = (error) => {
-            eventSource.close();
-            setIsLoading(false);
-            setToastMessage('Generation failed');
+            (async () => {
+                eventSource.close();
+                setIsLoading(false);
+
+                try {
+                    const errorResponse = await fetch('/api/generator?' + params.toString(), {
+                        method: 'GET'
+                    });
+                    const errorData = await errorResponse.json();
+                    showToast("Generation failed", errorData.error);
+                } catch (err) {
+                    showToast("Generation failed", "Unable to retrieve error details.");
+                }
+            })();
         };
 
         eventSource.addEventListener('end', () => {
             eventSource.close();
             setIsLoading(false);
-            setToastMessage('Generation completed');
+            showToast('Generation completed');
         });
     }, [message, style, paragraph, language, generate]);
 
@@ -80,16 +97,16 @@ export default function ParagraphGenerator() {
         if (textAreaRef.current) {
             (textAreaRef.current as any).focus();
         }
-        setToastMessage('Message cleared');
+        showToast('Message cleared');
     }, []);
 
     const handleCopy = useCallback(() => {
         navigator.clipboard.writeText(response).then(() => {
             console.log('Text copied to clipboard');
-            setToastMessage('Paragraphs copied');
+            showToast('Paragraphs copied');
         }).catch(err => {
             console.error('Could not copy text: ', err);
-            setToastMessage('Copy failed');
+            showToast('Copy failed');
         });
     }, [response]);
 
@@ -222,7 +239,7 @@ export default function ParagraphGenerator() {
                     </Box>
                 </Grid>
             </Flex>
-            <ToastComponent message={toastMessage}/>
+            <ToastComponent message={toastMessage} description={toastDescription}/>
         </Section>
     );
 }

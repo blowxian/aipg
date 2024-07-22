@@ -52,7 +52,7 @@ const Price: React.FC = () => {
                         duration="/month"
                         features={[
                             "Generate Paragraphs: 1-2 at once",
-                            "Paragraphs Limit: 6 paragraphs / D",
+                            "Limit: 6 paragraphs / D",
                             "Language: English",
                             "Speed: Fast",
                             "Tones: 3",
@@ -76,7 +76,7 @@ const Price: React.FC = () => {
                         duration="/week"
                         features={[
                             "Generate Paragraphs: 1-5 at once",
-                            "Paragraphs Limit: 50 paragraphs / W",
+                            "Limit: 50 paragraphs / W",
                             "Language: 5+",
                             "Speed: 2x faster",
                             "Tones: 5",
@@ -100,7 +100,7 @@ const Price: React.FC = () => {
                         duration="/month"
                         features={[
                             "Generate Paragraphs: 1-5 at once",
-                            "Paragraphs Limit: Unlimited",
+                            "Limit: Unlimited",
                             "Language: 14+",
                             "Speed: 3x faster",
                             "Tones: 13+",
@@ -125,7 +125,7 @@ const Price: React.FC = () => {
                         duration="/year"
                         features={[
                             "Generate Paragraphs: 1-5 at once",
-                            "Paragraphs Limit: Unlimited",
+                            "Limit: Unlimited",
                             "Language: 14+",
                             "Speed: 3x faster",
                             "Tones: 13+",
