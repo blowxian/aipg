@@ -9,15 +9,6 @@ else
     exit 1
 fi
 
-# 停止 Docker 容器
-echo "正在停止 Docker 容器..."
-if docker-compose -f docker-compose.prod.yml stop aipg; then
-    echo "Docker 容器停止成功。"
-else
-    echo "Docker 容器停止失败！"
-    exit 1
-fi
-
 # 清理系统
 echo "正在清理系统..."
 if docker system prune -a -f; then
@@ -33,6 +24,15 @@ if docker-compose -f docker-compose.prod.yml pull aipg; then
     echo "Docker 镜像拉取成功。"
 else
     echo "Docker 镜像拉取失败！"
+    exit 1
+fi
+
+# 停止 Docker 容器
+echo "正在停止 Docker 容器..."
+if docker-compose -f docker-compose.prod.yml stop aipg; then
+    echo "Docker 容器停止成功。"
+else
+    echo "Docker 容器停止失败！"
     exit 1
 fi
 
