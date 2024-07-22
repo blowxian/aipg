@@ -1,0 +1,212 @@
+{
+  "Home": {
+    "title": "Trình tạo đoạn văn AI cho nhà văn",
+    "subtitle": "Trình tạo đoạn văn AI mạnh mẽ nhất trực tuyến"
+  },
+  "Header": {
+    "generator": "Trình tạo",
+    "price": "Giá"
+  },
+  "Scene": {
+    "heading": "Các trường hợp sử dụng cho Trình tạo đoạn văn AI miễn phí",
+    "content_creation_tab": "Sử dụng cho Tạo nội dung",
+    "academic_writing_tab": "Sử dụng cho Viết học thuật",
+    "personal_writing_tab": "Sử dụng cho Viết cá nhân",
+    "content_creation_heading": "Nhanh chóng tạo ra các đoạn văn hấp dẫn cho các loại nội dung khác nhau.",
+    "blogging_title": "Viết blog",
+    "blogging_description": "Trình tạo đoạn văn AI có thể nhanh chóng tạo ra các đoạn văn hấp dẫn và thông tin cho các bài viết blog. Công cụ này có thể hỗ trợ tạo nội dung thuyết phục, tiết kiệm thời gian và công sức cho người tạo nội dung.",
+    "articles_title": "Bài viết",
+    "articles_description": "Dù là bài báo tin tức, bài viết ý kiến hay câu chuyện đặc biệt, Trình tạo đoạn văn có thể giúp tạo ra các đoạn văn được cấu trúc tốt và hấp dẫn, thu hút sự chú ý của độc giả.",
+    "product_descriptions_title": "Mô tả sản phẩm",
+    "product_descriptions_description": "Đối với các doanh nghiệp thương mại điện tử, việc tạo ra các mô tả sản phẩm chi tiết và hấp dẫn là rất quan trọng. Trình tạo đoạn văn có thể tạo ra các mô tả thông tin và thuyết phục, làm nổi bật các tính năng và lợi ích chính của sản phẩm.",
+    "content_creation_quote": "Sử dụng Trình tạo đoạn văn AI cho việc tạo nội dung có thể tăng tốc quá trình viết và đảm bảo sự nhất quán về giọng điệu và phong cách.",
+    "academic_writing_heading": "Hỗ trợ sinh viên và nhà nghiên cứu tạo ra các đoạn văn được cấu trúc tốt.",
+    "essays_title": "Tiểu luận",
+    "essays_description": "Sinh viên có thể hưởng lợi từ Trình tạo đoạn văn khi làm việc trên các bài tiểu luận. Công cụ này có thể tạo ra các đoạn văn được cấu trúc tốt, trình bày các lập luận chính, bằng chứng và phân tích bằng cách cung cấp các hướng dẫn cần thiết.",
+    "research_articles_title": "Bài nghiên cứu",
+    "research_articles_description": "Các nhà nghiên cứu có thể sử dụng Trình tạo đoạn văn để phác thảo các phần của bài nghiên cứu, như tổng quan tài liệu, phương pháp và thảo luận. Điều này có thể giúp đơn giản hóa quá trình viết và đảm bảo sự rõ ràng và mạch lạc.",
+    "papers_title": "Báo cáo",
+    "papers_description": "Đối với các báo cáo học thuật, Trình tạo đoạn văn có thể giúp tạo ra các đoạn văn rõ ràng và ngắn gọn, truyền đạt hiệu quả các ý tưởng và phát hiện phức tạp.",
+    "academic_writing_quote": "Trình tạo đoạn văn AI có thể là một công cụ quý giá cho việc viết học thuật, giúp tổ chức ý tưởng và trình bày thông tin một cách logic.",
+    "personal_writing_heading": "Giúp các cá nhân soạn thảo các đoạn văn mạch lạc và được cấu trúc tốt cho giao tiếp cá nhân.",
+    "emails_title": "Email",
+    "emails_description": "Những người cần viết email chuyên nghiệp hoặc cá nhân có thể tận dụng Trình tạo đoạn văn. Nó có thể giúp soạn thảo các đoạn văn mạch lạc và được cấu trúc tốt, đảm bảo biểu đạt hiệu quả các suy nghĩ và ý tưởng.",
+    "personal_letters_title": "Thư cá nhân",
+    "personal_letters_description": "Đối với các thư cá nhân, Trình tạo đoạn văn có thể giúp soạn thảo các đoạn văn chân thành và ý nghĩa, truyền đạt cảm xúc và tình cảm một cách hiệu quả."
+  },
+  "Highlight": {
+    "heading": "Các hình thức giao tiếp viết khác",
+    "intro": "Dù là viết bài phát biểu, ghi nhật ký hay bài đăng trên mạng xã hội, Trình tạo đoạn văn có thể cung cấp một điểm bắt đầu và giúp tổ chức suy nghĩ thành các đoạn văn mạch lạc.",
+    "quote1": "Sử dụng Trình tạo đoạn văn AI cho việc viết cá nhân có thể tiết kiệm thời gian và đảm bảo giao tiếp của bạn rõ ràng và có tác động.",
+    "subheading": "Công nghệ đằng sau Trình tạo đoạn văn AI",
+    "section1_heading": "Công nghệ AI tiên tiến",
+    "section1_text": "Trình tạo đoạn văn AI sử dụng một mô hình ngôn ngữ lớn học các mẫu, ngữ pháp và từ vựng từ lượng lớn dữ liệu văn bản. Do đó, nó có thể tạo ra văn bản giống con người dựa trên một đoạn văn hoặc đầu vào được cung cấp.",
+    "section2_heading": "Xử lý ngôn ngữ tự nhiên (NLP) là gì?",
+    "section2_text": "Các khả năng NLP của công cụ đảm bảo rằng văn bản được tạo ra có ngữ cảnh phong phú và dễ đọc, làm cho nó phù hợp với các nhu cầu viết khác nhau.",
+    "section3_heading": "Mô hình học máy là gì?",
+    "section3_text": "Trình tạo đoạn văn liên tục cải tiến để cung cấp nội dung phù hợp và chất lượng cao nhất, thích ứng với các phong cách và giọng điệu viết khác nhau.",
+    "quote2": "Công nghệ đằng sau Trình tạo đoạn văn AI kết hợp NLP tiên tiến và học máy để tạo ra các đoạn văn mạch lạc và chất lượng cao."
+  },
+  "Benefit": {
+    "heading": "Lợi ích của việc sử dụng Trình tạo đoạn văn AI",
+    "intro": "Trình tạo đoạn văn AI là một công cụ mạnh mẽ cho các nhu cầu viết khác nhau, từ tạo nội dung và viết học thuật đến giao tiếp cá nhân. Bằng cách tận dụng công nghệ AI tiên tiến, nó giúp người dùng nhanh chóng và hiệu quả tạo ra các đoạn văn mạch lạc và chất lượng cao.",
+    "efficiency_title": "Hiệu quả",
+    "efficiency_text": "Trình tạo đoạn văn AI có thể tạo ra các đoạn văn trong vài giây, tăng tốc đáng kể quá trình viết và cho phép người viết tập trung vào các nhiệm vụ khác.",
+    "versatility_title": "Đa năng",
+    "versatility_text": "Các công cụ này có thể tạo nội dung cho các mục đích khác nhau, bao gồm các bài viết blog, bài viết, viết học thuật, đề xuất kinh doanh, v.v.",
+    "customization_title": "Tùy chỉnh",
+    "customization_text": "Người dùng có thể chỉ định các tham số như giọng điệu, phong cách và từ khóa để điều chỉnh đầu ra cho phù hợp với nhu cầu của họ, đảm bảo rằng nội dung được tạo ra phù hợp với mục tiêu của họ.",
+    "seo_optimization_title": "Tối ưu hóa SEO",
+    "seo_optimization_text": "Nhiều Trình tạo đoạn văn AI có thể tích hợp các từ khóa liên quan để cải thiện khả năng hiển thị trên công cụ tìm kiếm, làm cho chúng trở thành công cụ có giá trị cho tiếp thị kỹ thuật số."
+  },
+  "Overcome": {
+    "heading": "Cách vượt qua chặn viết",
+    "intro": "Trình tạo đoạn văn AI cung cấp một điểm bắt đầu cho các nhà văn đang gặp khó khăn với cảm hứng hoặc đối mặt với thời hạn chặt chẽ, giúp vượt qua chặn viết.",
+    "quote1": "Trình tạo đoạn văn AI mang lại những lợi ích đáng kể, bao gồm hiệu quả, đa năng, tùy chỉnh và tối ưu hóa SEO.",
+    "subheading": "Cách sử dụng Trình tạo đoạn văn AI hiệu quả",
+    "section1_heading": "Cung cấp các đoạn văn rõ ràng",
+    "section1_text": "Để có kết quả tốt nhất, hãy cung cấp các đoạn văn hoặc chủ đề rõ ràng và cụ thể để hướng dẫn AI trong việc tạo nội dung liên quan.",
+    "section2_heading": "Xem lại và chỉnh sửa",
+    "section2_text": "Luôn xem lại và chỉnh sửa nội dung được tạo ra để đảm bảo độ chính xác và phù hợp với mục tiêu của bạn. Nội dung được tạo ra bởi AI có thể cần kiểm tra sự thật và tinh chỉnh.",
+    "section3_heading": "Sử dụng như một công cụ bổ sung",
+    "section3_text": "Sử dụng công cụ này để bổ sung cho quá trình viết của bạn, không phải là sự thay thế hoàn toàn cho sự sáng tạo và chuyên môn của con người. AI có thể hỗ trợ nhưng không nên thay thế những hiểu biết độc đáo và cảm giác cá nhân mà các nhà văn con người mang lại.",
+    "quote2": "Sử dụng Trình tạo đoạn văn AI hiệu quả bao gồm việc cung cấp các đoạn văn rõ ràng, xem lại và chỉnh sửa nội dung, và sử dụng công cụ này để bổ sung cho sự sáng tạo của con người."
+  },
+  "FAQ": {
+    "heading": "Câu hỏi thường gặp (FAQ)",
+    "items": [
+      {
+        "question": "Q1: Trình tạo đoạn văn AI là gì?",
+        "answer": "A1: Trình tạo đoạn văn AI là một công cụ hỗ trợ AI tạo ra các đoạn văn hấp dẫn và thông tin cho nhiều loại nội dung khác nhau, bao gồm các bài viết blog, bài viết và báo cáo học thuật."
+      },
+      {
+        "question": "Q2: Trình tạo đoạn văn AI hoạt động như thế nào?",
+        "answer": "A2: Công cụ này sử dụng một mô hình ngôn ngữ học các mẫu, ngữ pháp và từ vựng từ lượng lớn dữ liệu văn bản. Sau đó, nó tạo ra văn bản giống con người dựa trên một đoạn văn hoặc đầu vào được cung cấp."
+      },
+      {
+        "question": "Q3: Trình tạo đoạn văn AI có thể sử dụng cho viết học thuật không?",
+        "answer": "A3: Có, sinh viên và nhà nghiên cứu có thể sử dụng công cụ này để tạo ra các đoạn văn được cấu trúc tốt cho các bài tiểu luận, bài nghiên cứu và báo cáo học thuật."
+      },
+      {
+        "question": "Q4: Những lợi ích của việc sử dụng Trình tạo đoạn văn AI là gì?",
+        "answer": "A4: Trình tạo đoạn văn AI mang lại lợi ích như hiệu quả, đa năng, tùy chỉnh, tối ưu hóa SEO và vượt qua chặn viết."
+      },
+      {
+        "question": "Q5: Làm thế nào để sử dụng Trình tạo đoạn văn AI hiệu quả?",
+        "answer": "A5: Cung cấp các đoạn văn rõ ràng, xem lại và chỉnh sửa nội dung được tạo ra, và sử dụng công cụ này để bổ sung cho quá trình viết của bạn."
+      }
+    ]
+  },
+  "Price": {
+    "heading": "Chọn kế hoạch phù hợp với nhu cầu của bạn",
+    "intro": "Các kế hoạch của chúng tôi được thiết kế để cung cấp các tính năng tốt nhất với giá cả phải chăng.",
+    "plans": {
+      "free": {
+        "title": "Miễn phí",
+        "price": "$0",
+        "originalPrice": "",
+        "duration": "/tháng",
+        "features": [
+          "Tạo đoạn văn: 1-2 đoạn một lần",
+          "Giới hạn: 6 đoạn / D",
+          "Ngôn ngữ: Tiếng Anh",
+          "Tốc độ: Nhanh",
+          "Giọng điệu: 3",
+          "Viết lại đoạn văn: 3 lần mỗi ngày",
+          "Chế độ: 2",
+          "Giới hạn từ mỗi lần tạo: 300",
+          "Tóm tắt đoạn văn: 3 lần mỗi ngày",
+          "Độ dài tóm tắt: Mặc định",
+          "Mở rộng đoạn văn: 3 lần mỗi ngày",
+          "Giới hạn từ: Lên đến 200 từ",
+          "Hỗ trợ: Cơ bản",
+          "Quảng cáo & Captcha: Có"
+        ],
+        "buttonText": "Bắt đầu"
+      },
+      "weekly": {
+        "title": "Hàng tuần",
+        "price": "$4",
+        "originalPrice": "",
+        "duration": "/tuần",
+        "features": [
+          "Tạo đoạn văn: 1-5 đoạn một lần",
+          "Giới hạn: 50 đoạn / W",
+          "Ngôn ngữ: 5+",
+          "Tốc độ: Nhanh gấp 2 lần",
+          "Giọng điệu: 5",
+          "Viết lại đoạn văn: 10 lần mỗi tuần",
+          "Chế độ: 4",
+          "Giới hạn từ mỗi lần tạo: 600",
+          "Tóm tắt đoạn văn: 10 lần mỗi tuần",
+          "Độ dài tóm tắt: Ngắn, Trung bình",
+          "Mở rộng đoạn văn: 10 lần mỗi tuần",
+          "Giới hạn từ: Lên đến 500 từ",
+          "Hỗ trợ: Ưu tiên",
+          "Quảng cáo & Captcha: Không"
+        ],
+        "buttonText": "Bắt đầu"
+      },
+      "monthly": {
+        "title": "Hàng tháng",
+        "price": "$8",
+        "originalPrice": "$16",
+        "duration": "/tháng",
+        "features": [
+          "Tạo đoạn văn: 1-5 đoạn một lần",
+          "Giới hạn: Không giới hạn",
+          "Ngôn ngữ: 14+",
+          "Tốc độ: Nhanh gấp 3 lần",
+          "Giọng điệu: 13+",
+          "Viết lại đoạn văn: Không giới hạn",
+          "Chế độ: 8+",
+          "Bao gồm chế độ tìm kiếm: Có",
+          "Giới hạn từ mỗi lần tạo: 1500+",
+          "Tóm tắt đoạn văn: Không giới hạn",
+          "Độ dài tóm tắt: Ngắn, Trung bình, Dài",
+          "Mở rộng đoạn văn: Không giới hạn",
+          "Giới hạn từ: Không giới hạn",
+          "Hỗ trợ: 24x7",
+          "Quảng cáo & Captcha: Không"
+        ],
+        "buttonText": "Bắt đầu"
+      },
+      "yearly": {
+        "title": "Hàng năm",
+        "price": "$68",
+        "originalPrice": "$192",
+        "duration": "/năm",
+        "features": [
+          "Tạo đoạn văn: 1-5 đoạn một lần",
+          "Giới hạn: Không giới hạn",
+          "Ngôn ngữ: 14+",
+          "Tốc độ: Nhanh gấp 3 lần",
+          "Giọng điệu: 13+",
+          "Viết lại đoạn văn: Không giới hạn",
+          "Chế độ: 8+",
+          "Bao gồm chế độ tìm kiếm: Có",
+          "Giới hạn từ mỗi lần tạo: 1500+",
+          "Tóm tắt đoạn văn: Không giới hạn",
+          "Độ dài tóm tắt: Ngắn, Trung bình, Dài",
+          "Mở rộng đoạn văn: Không giới hạn",
+          "Giới hạn từ: Không giới hạn",
+          "Hỗ trợ: 24x7",
+          "Quảng cáo & Captcha: Không"
+        ],
+        "buttonText": "Bắt đầu"
+      }
+    }
+  },
+  "Footer": {
+    "company": "&copy; AIParagraphGenerator.net - Bảo lưu mọi quyền.",
+    "product": "Sản phẩm",
+    "cases": "Trường hợp",
+    "pricing": "Giá & Kế hoạch",
+    "companyInfo": "Công ty",
+    "aboutUs": "Về chúng tôi",
+    "blog": "Blog",
+    "resources": "Tài nguyên",
+    "terms": "Điều khoản dịch vụ",
+    "social": "Mạng xã hội"
+  }
+}

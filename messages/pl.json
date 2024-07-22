@@ -1,0 +1,212 @@
+{
+  "Home": {
+    "title": "AI Generator Akapitów dla pisarzy",
+    "subtitle": "Najpotężniejszy Generator Akapitów Online"
+  },
+  "Header": {
+    "generator": "Generator",
+    "price": "Cena"
+  },
+  "Scene": {
+    "heading": "Przypadki użycia darmowego AI Generatora Akapitów",
+    "content_creation_tab": "Użyj do tworzenia treści",
+    "academic_writing_tab": "Użyj do pisania akademickiego",
+    "personal_writing_tab": "Użyj do pisania osobistego",
+    "content_creation_heading": "Szybko generuj angażujące akapity do różnych typów treści.",
+    "blogging_title": "Blogowanie",
+    "blogging_description": "AI Generator Akapitów może szybko tworzyć angażujące i informacyjne akapity do postów na blogu. To narzędzie może pomóc w tworzeniu atrakcyjnych treści, oszczędzając czas i wysiłek twórców treści.",
+    "articles_title": "Artykuły",
+    "articles_description": "Niezależnie od tego, czy są to artykuły informacyjne, opinie, czy opowiadania, Generator Akapitów może pomóc w tworzeniu dobrze zbudowanych i angażujących akapitów, które przyciągną uwagę czytelnika.",
+    "product_descriptions_title": "Opisy produktów",
+    "product_descriptions_description": "Dla firm e-commerce generowanie szczegółowych i atrakcyjnych opisów produktów jest kluczowe. Generator Akapitów może tworzyć informacyjne i przekonujące opisy, które podkreślają kluczowe cechy i korzyści produktów.",
+    "content_creation_quote": "Użycie AI Generatora Akapitów do tworzenia treści może znacznie przyspieszyć proces pisania i zapewnić spójność tonu i stylu.",
+    "academic_writing_heading": "Pomoc studentom i badaczom w tworzeniu dobrze zbudowanych akapitów.",
+    "essays_title": "Eseje",
+    "essays_description": "Studenci mogą skorzystać z Generatora Akapitów podczas pisania esejów. Narzędzie może generować dobrze zbudowane akapity, które przedstawiają kluczowe argumenty, dowody i analizy, dostarczając niezbędnych instrukcji.",
+    "research_articles_title": "Artykuły naukowe",
+    "research_articles_description": "Badacze mogą używać Generatora Akapitów do tworzenia sekcji artykułów naukowych, takich jak przegląd literatury, metodologia i dyskusja. To może uprościć proces pisania i zapewnić jasność i spójność.",
+    "papers_title": "Prace",
+    "papers_description": "W przypadku prac akademickich Generator Akapitów może pomóc w tworzeniu jasnych i zwięzłych akapitów, które skutecznie przekazują skomplikowane idee i wyniki.",
+    "academic_writing_quote": "AI Generator Akapitów może być wartościowym narzędziem do pisania akademickiego, pomagając w organizacji myśli i logicznym przedstawianiu informacji.",
+    "personal_writing_heading": "Pomoc w tworzeniu spójnych i dobrze zbudowanych akapitów do osobistej komunikacji.",
+    "emails_title": "E-maile",
+    "emails_description": "Osoby, które muszą pisać profesjonalne lub osobiste e-maile, mogą skorzystać z Generatora Akapitów. Może on pomóc w tworzeniu spójnych i dobrze zbudowanych akapitów, zapewniając skuteczne wyrażanie myśli i idei.",
+    "personal_letters_title": "Listy osobiste",
+    "personal_letters_description": "W przypadku listów osobistych Generator Akapitów może pomóc w tworzeniu serdecznych i znaczących akapitów, które skutecznie przekazują emocje i uczucia."
+  },
+  "Highlight": {
+    "heading": "Inne formy komunikacji pisemnej",
+    "intro": "Niezależnie od tego, czy piszesz przemówienie, wpis do dziennika, czy post na mediach społecznościowych, Generator Akapitów może zapewnić punkt wyjścia i pomóc w organizacji myśli w spójne akapity.",
+    "quote1": "Używanie AI Generatora Akapitów do pisania osobistego może zaoszczędzić czas i zapewnić, że twoja komunikacja będzie jasna i wpływowa.",
+    "subheading": "Technologia za AI Generatora Akapitów",
+    "section1_heading": "Zaawansowana technologia AI",
+    "section1_text": "AI Generator Akapitów używa dużego modelu językowego, który uczy się wzorców, gramatyki i słownictwa z dużych ilości danych tekstowych. Dzięki temu może generować tekst przypominający ludzki na podstawie danego polecenia lub wejścia.",
+    "section2_heading": "Czym jest Przetwarzanie Języka Naturalnego (NLP)",
+    "section2_text": "Zdolności NLP narzędzia zapewniają, że generowany tekst jest kontekstowo bogaty i przyjazny dla czytelnika, co czyni go odpowiednim do różnych potrzeb pisarskich.",
+    "section3_heading": "Czym są modele uczenia maszynowego",
+    "section3_text": "Generator Akapitów ciągle się doskonali, aby dostarczać najbardziej odpowiednie i wysokiej jakości treści, dostosowując się do różnych stylów i tonów pisania.",
+    "quote2": "Technologia za AI Generatora Akapitów łączy zaawansowane NLP i uczenie maszynowe, aby tworzyć wysokiej jakości, spójne akapity."
+  },
+  "Benefit": {
+    "heading": "Korzyści z używania AI Generatora Akapitów",
+    "intro": "AI Generator Akapitów to potężne narzędzie do różnych potrzeb pisarskich, od tworzenia treści i pisania akademickiego po komunikację osobistą. Wykorzystując zaawansowaną technologię AI, pomaga użytkownikom szybko i skutecznie generować wysokiej jakości, spójne akapity.",
+    "efficiency_title": "Wydajność",
+    "efficiency_text": "AI generatory akapitów mogą tworzyć akapity w ciągu kilku sekund, znacznie przyspieszając proces pisania i pozwalając pisarzom skupić się na innych zadaniach.",
+    "versatility_title": "Wszechstronność",
+    "versatility_text": "Te narzędzia mogą tworzyć treści do różnych celów, w tym postów na blogu, artykułów, pisania akademickiego, propozycji biznesowych itp.",
+    "customization_title": "Dostosowanie",
+    "customization_text": "Użytkownicy mogą określać parametry, takie jak ton, styl i słowa kluczowe, aby dostosować wynik do swoich potrzeb, zapewniając, że wygenerowane treści będą zgodne z ich celami.",
+    "seo_optimization_title": "Optymalizacja SEO",
+    "seo_optimization_text": "Wiele AI generatorów akapitów może włączać odpowiednie słowa kluczowe, aby poprawić widoczność w wyszukiwarkach, co czyni je wartościowymi narzędziami do marketingu cyfrowego."
+  },
+  "Overcome": {
+    "heading": "Jak pokonać blokadę pisarską",
+    "intro": "AI generatory akapitów zapewniają punkt wyjścia dla pisarzy borykających się z brakiem inspiracji lub mających napięte terminy, pomagając pokonać blokadę pisarską.",
+    "quote1": "AI generatory akapitów oferują znaczące korzyści, w tym wydajność, wszechstronność, dostosowanie i optymalizację SEO.",
+    "subheading": "Jak efektywnie używać AI Generatora Akapitów",
+    "section1_heading": "Podawaj jasne polecenia",
+    "section1_text": "Aby uzyskać najlepsze wyniki, podawaj jasne i konkretne polecenia lub tematy, aby skierować AI na tworzenie odpowiednich treści.",
+    "section2_heading": "Przeglądaj i edytuj",
+    "section2_text": "Zawsze przeglądaj i edytuj wygenerowane treści, aby zapewnić ich dokładność i zgodność z celami. Treści generowane przez AI mogą wymagać sprawdzenia faktów i dopracowania.",
+    "section3_heading": "Używaj jako suplementu",
+    "section3_text": "Używaj narzędzia jako suplementu do swojego procesu pisania, a nie jako całkowitego zastępstwa dla ludzkiej kreatywności i wiedzy. AI może wspierać, ale nie powinno zastępować unikalnych spostrzeżeń i osobistego podejścia, jakie przynoszą ludzie.",
+    "quote2": "Efektywne używanie AI generatorów akapitów polega na podawaniu jasnych poleceń, przeglądaniu i edytowaniu treści oraz używaniu narzędzia jako suplementu do ludzkiej kreatywności."
+  },
+  "FAQ": {
+    "heading": "Często zadawane pytania (FAQ)",
+    "items": [
+      {
+        "question": "Q1: Co to jest AI Generator Akapitów?",
+        "answer": "A1: AI Generator Akapitów to narzędzie zasilane AI, które generuje angażujące i informacyjne akapity do różnych typów treści, w tym postów na blogu, artykułów i prac akademickich."
+      },
+      {
+        "question": "Q2: Jak działa AI Generator Akapitów?",
+        "answer": "A2: Narzędzie wykorzystuje model językowy, który uczy się wzorców, gramatyki i słownictwa z dużych ilości danych tekstowych. Następnie generuje tekst przypominający ludzki na podstawie danego polecenia lub wejścia."
+      },
+      {
+        "question": "Q3: Czy AI Generator Akapitów może być używany do pisania akademickiego?",
+        "answer": "A3: Tak, studenci i badacze mogą używać narzędzia do generowania dobrze zbudowanych akapitów do esejów, artykułów naukowych i prac."
+      },
+      {
+        "question": "Q4: Jakie są korzyści z używania AI generatorów akapitów?",
+        "answer": "A4: AI generatory akapitów oferują korzyści, takie jak wydajność, wszechstronność, dostosowanie, optymalizacja SEO i pokonywanie blokady pisarskiej."
+      },
+      {
+        "question": "Q5: Jak mogę efektywnie używać AI Generatora Akapitów?",
+        "answer": "A5: Podawaj jasne polecenia, przeglądaj i edytuj wygenerowane treści oraz używaj narzędzia jako suplementu do swojego procesu pisania."
+      }
+    ]
+  },
+  "Price": {
+    "heading": "Wybierz plan, który odpowiada Twoim potrzebom",
+    "intro": "Nasze plany zostały zaprojektowane, aby zapewnić najlepsze funkcje w przystępnych cenach.",
+    "plans": {
+      "free": {
+        "title": "Bezpłatny",
+        "price": "0 zł",
+        "originalPrice": "",
+        "duration": "/miesiąc",
+        "features": [
+          "Generuj akapity: 1-2 naraz",
+          "Limit: 6 akapitów / D",
+          "Język: Angielski",
+          "Szybkość: Szybko",
+          "Tones: 3",
+          "Przepisz akapit: 3 na dzień",
+          "Tryby: 2",
+          "Limit słów na generację: 300",
+          "Podsumowanie akapitów: 3 na dzień",
+          "Długość podsumowania: Domyślna",
+          "Rozszerz akapit: 3 na dzień",
+          "Limit słów: do 200 słów",
+          "Wsparcie: Podstawowe",
+          "Reklamy i Captcha: Tak"
+        ],
+        "buttonText": "Rozpocznij"
+      },
+      "weekly": {
+        "title": "Tygodniowy",
+        "price": "4 zł",
+        "originalPrice": "",
+        "duration": "/tydzień",
+        "features": [
+          "Generuj akapity: 1-5 naraz",
+          "Limit: 50 akapitów / T",
+          "Język: 5+",
+          "Szybkość: 2x szybciej",
+          "Tones: 5",
+          "Przepisz akapit: 10 na tydzień",
+          "Tryby: 4",
+          "Limit słów na generację: 600",
+          "Podsumowanie akapitów: 10 na tydzień",
+          "Długość podsumowania: Krótka, Średnia",
+          "Rozszerz akapit: 10 na tydzień",
+          "Limit słów: do 500 słów",
+          "Wsparcie: Priorytetowe",
+          "Reklamy i Captcha: Nie"
+        ],
+        "buttonText": "Rozpocznij"
+      },
+      "monthly": {
+        "title": "Miesięczny",
+        "price": "8 zł",
+        "originalPrice": "16 zł",
+        "duration": "/miesiąc",
+        "features": [
+          "Generuj akapity: 1-5 naraz",
+          "Limit: Nieograniczony",
+          "Język: 14+",
+          "Szybkość: 3x szybciej",
+          "Tones: 13+",
+          "Przepisz akapit: Nieograniczone",
+          "Tryby: 8+",
+          "Tryb wyszukiwania w zestawie: Tak",
+          "Limit słów na generację: 1500+",
+          "Podsumowanie akapitów: Nieograniczone",
+          "Długość podsumowania: Krótka, Średnia, Długa",
+          "Rozszerz akapit: Nieograniczone",
+          "Limit słów: Nieograniczone",
+          "Wsparcie: 24x7",
+          "Reklamy i Captcha: Nie"
+        ],
+        "buttonText": "Rozpocznij"
+      },
+      "yearly": {
+        "title": "Roczny",
+        "price": "68 zł",
+        "originalPrice": "192 zł",
+        "duration": "/rok",
+        "features": [
+          "Generuj akapity: 1-5 naraz",
+          "Limit: Nieograniczony",
+          "Język: 14+",
+          "Szybkość: 3x szybciej",
+          "Tones: 13+",
+          "Przepisz akapit: Nieograniczone",
+          "Tryby: 8+",
+          "Tryb wyszukiwania w zestawie: Tak",
+          "Limit słów na generację: 1500+",
+          "Podsumowanie akapitów: Nieograniczone",
+          "Długość podsumowania: Krótka, Średnia, Długa",
+          "Rozszerz akapit: Nieograniczone",
+          "Limit słów: Nieograniczone",
+          "Wsparcie: 24x7",
+          "Reklamy i Captcha: Nie"
+        ],
+        "buttonText": "Rozpocznij"
+      }
+    }
+  },
+  "Footer": {
+    "company": "&copy; AIParagraphGenerator.net - Wszelkie prawa zastrzeżone.",
+    "product": "Produkt",
+    "cases": "Przypadki",
+    "pricing": "Ceny i plany",
+    "companyInfo": "Firma",
+    "aboutUs": "O nas",
+    "blog": "Blog",
+    "resources": "Zasoby",
+    "terms": "Warunki użytkowania",
+    "social": "Społeczność"
+  }
+}
