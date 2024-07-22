@@ -21,7 +21,7 @@ interface GoogleLoginResponse {
 }
 
 export default function Header() {
-    const t = useTranslations('Header' as any);
+    const t = useTranslations('Header');
     const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
@@ -95,8 +95,8 @@ export default function Header() {
                     </div>
 
                     <Flex justify="center" gap="8">
-                        <Link href="#generator">{t("generator" as any)}</Link>
-                        <Link href="#price">{t("price" as any)}</Link>
+                        <Link href="#generator">{t("generator")}</Link>
+                        <Link href="#price">{t("price")}</Link>
                     </Flex>
 
                     <Flex>

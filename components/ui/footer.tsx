@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Logo from "./logo";
+import {useTranslations} from 'next-intl';
 
 export default function Footer({border = false}: { border?: boolean }) {
+    const t = useTranslations('Footer');
+
     return (
         <footer className="overflow-hidden">
             <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -14,21 +17,19 @@ export default function Footer({border = false}: { border?: boolean }) {
                         <div>
                             <Logo/>
                         </div>
-                        <div className="text-sm text-gray-600">
-                            &copy; AIParagraphGenerator.net - All rights reserved.
-                        </div>
+                        <div className="text-sm text-gray-600" dangerouslySetInnerHTML={{__html: t("company")}}/>
                     </div>
 
                     {/* 2nd block */}
                     <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-                        <h3 className="text-sm font-medium">Product</h3>
+                        <h3 className="text-sm font-medium">{t("product")}</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <Link
                                     className="text-gray-600 transition hover:text-gray-900"
                                     href="#case"
                                 >
-                                    Cases
+                                    {t("cases")}
                                 </Link>
                             </li>
                             <li>
@@ -36,7 +37,7 @@ export default function Footer({border = false}: { border?: boolean }) {
                                     className="text-gray-600 transition hover:text-gray-900"
                                     href="#price"
                                 >
-                                    Pricing & Plans
+                                    {t("pricing")}
                                 </Link>
                             </li>
                         </ul>
@@ -44,14 +45,14 @@ export default function Footer({border = false}: { border?: boolean }) {
 
                     {/* 3rd block */}
                     <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-                        <h3 className="text-sm font-medium">Company</h3>
+                        <h3 className="text-sm font-medium">{t("companyInfo")}</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <Link
                                     className="text-gray-600 transition hover:text-gray-900"
                                     href="#0"
                                 >
-                                    About us
+                                    {t("aboutUs")}
                                 </Link>
                             </li>
                             <li>
@@ -59,7 +60,7 @@ export default function Footer({border = false}: { border?: boolean }) {
                                     className="text-gray-600 transition hover:text-gray-900"
                                     href="#0"
                                 >
-                                    Blog
+                                    {t("blog")}
                                 </Link>
                             </li>
                         </ul>
@@ -67,14 +68,14 @@ export default function Footer({border = false}: { border?: boolean }) {
 
                     {/* 4th block */}
                     <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-                        <h3 className="text-sm font-medium">Resources</h3>
+                        <h3 className="text-sm font-medium">{t("resources")}</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <Link
                                     className="text-gray-600 transition hover:text-gray-900"
                                     href="#0"
                                 >
-                                    Terms of service
+                                    {t("terms")}
                                 </Link>
                             </li>
                         </ul>
@@ -82,7 +83,7 @@ export default function Footer({border = false}: { border?: boolean }) {
 
                     {/* 5th block */}
                     <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-                        <h3 className="text-sm font-medium">Social</h3>
+                        <h3 className="text-sm font-medium">{t("social")}</h3>
                         <ul className="flex gap-1">
                             <li>
                                 <Link
