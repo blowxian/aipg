@@ -31,18 +31,32 @@ export async function POST(req: NextRequest) {
             },
         });
 
-        // 设置 cookie 包含 user.id
-        const response = NextResponse.json({message: 'User information saved and session recorded.'}, {status: 200});
-        response.cookies.set('user', JSON.stringify({
+        // 检查用户是否有有效订阅
+        const activeSubscription = await prisma.subscription.findFirst({
+            where: {
+                userId: user.id,
+                isActive: true,
+                expiryDate: {
+                    gte: new Date(),
+                },
+            },
+        });
+
+        const hasActiveSubscription = !!activeSubscription;
+
+        // 设置 cookie 包含 user.id 和订阅信息
+        const response = NextResponse.json({message: 'User information saved and session recorded.'}, {status: 200} as any);
+        response.cookies.set('user' as any, JSON.stringify({
             id: user.id,
             name: user.name,
             avatar: user.profileImage,
-            email: user.email
-        }), {secure: true, sameSite: 'strict', path: '/', maxAge: 60 * 60 * 24 * 7});
+            email: user.email,
+            hasActiveSubscription: hasActiveSubscription,
+        }) as any, {secure: true, sameSite: 'strict', path: '/', maxAge: 60 * 60 * 24 * 7} as any);
 
         return response;
     } catch (error) {
         console.error(error);
-        return NextResponse.json({message: 'Internal server error'}, {status: 500});
+        return NextResponse.json({message: 'Internal server error'}, {status: 500} as any);
     }
 }

@@ -72,6 +72,9 @@ export default function Header() {
 
             if (!auth_response.ok) {
                 console.error('Failed to save user information');
+            } else {
+                // 触发重新渲染
+                (window as any).triggerParagraphGeneratorUpdate();
             }
         };
 

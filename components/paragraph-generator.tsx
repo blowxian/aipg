@@ -19,6 +19,7 @@ export default function ParagraphGenerator() {
     const [isLoading, setIsLoading] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
     const textAreaRef = useRef(null);
+    const [updateTrigger, setUpdateTrigger] = useState(false); // 新增状态用于触发更新
 
     const {deviceType, os} = useDeviceInfo(); // 使用检测设备信息的 Hook
 
@@ -104,6 +105,18 @@ export default function ParagraphGenerator() {
         };
     }, [handleSubmit, handleClear, handleCopy, isLoading]);
 
+    useEffect(() => {
+        // 将回调函数绑定到 window 对象上
+        (window as any).triggerParagraphGeneratorUpdate = () => {
+            setUpdateTrigger(prev => !prev);
+        };
+
+        // 清理函数
+        return () => {
+            delete (window as any).triggerParagraphGeneratorUpdate;
+        };
+    }, []);
+
     const renderClearShortcut = () => {
         if (deviceType === 'desktop') {
             return os === 'MacOS' ? <Kbd size="1">&#8984; + K</Kbd> : <Kbd size="1">Ctrl + K</Kbd>;
@@ -125,9 +138,8 @@ export default function ParagraphGenerator() {
         return null;
     };
 
-
     return (
-        <Section className="overflow-x-hidden !py-3 md:!py-8">
+        <Section key={updateTrigger.toString()} className="overflow-x-hidden !py-3 md:!py-8">
             <Flex direction="column" className="border-0 md:border rounded-lg p-3">
                 <Flex>
                     <StyleToggle onChange={setStyle}/>
@@ -197,7 +209,6 @@ export default function ParagraphGenerator() {
                 </Grid>
             </Flex>
             <ToastComponent message={toastMessage}/>
-</Section>
-)
-    ;
+        </Section>
+    );
 }

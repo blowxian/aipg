@@ -1,9 +1,10 @@
 "use client"
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import {Option, ToggleGroupComponentProps} from './toggle.types';
 import {LockClosedIcon} from "@radix-ui/react-icons";
+import Cookies from 'js-cookie';
 
 type ToggleProps = {
     onChange: (value: string) => void;
@@ -41,8 +42,8 @@ const paragraphOptions: Option[] = [
 
 const languageOptions: Option[] = [
     {value: 'english', label: 'English'},
-    {value: 'mandarin', label: 'Chinese'},
-    {value: 'russian', label: 'Russian'},
+    {value: 'mandarin', label: 'Chinese', paid: true},
+    {value: 'russian', label: 'Russian', paid: true},
     {value: 'spanish', label: 'Spanish', paid: true},
     {value: 'french', label: 'French', paid: true},
     {value: 'portuguese', label: 'Portuguese', paid: true},
@@ -61,7 +62,12 @@ const generateOptions: Option[] = [
     {value: 'enhanced', label: 'Enhanced with Search', paid: true}
 ];
 
-const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options, onChange}) => (
+const Toggle: React.FC<ToggleGroupComponentProps & { hasActiveSubscription: boolean }> = ({
+                                                                                              defaultValue,
+                                                                                              options,
+                                                                                              onChange,
+                                                                                              hasActiveSubscription
+                                                                                          }) => (
     <ToggleGroup.Root
         className="inline-flex bg-mauve6 rounded space-x-px border mb-3 overflow-x-auto no-scrollbar"
         type="single"
@@ -75,9 +81,9 @@ const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options, onC
                 className={toggleGroupItemClasses}
                 value={option.value}
                 aria-label={option.label}
-                disabled={option.paid || false} // 如果是付费的则禁用
+                disabled={option.paid && !hasActiveSubscription} // 如果是付费的且用户没有有效订阅则禁用
             >
-                {option.paid ? (
+                {option.paid && !hasActiveSubscription ? (
                     <span className="flex items-center whitespace-nowrap">
                         <LockClosedIcon className="mr-1"/>
                         {option.label}
@@ -93,20 +99,63 @@ const Toggle: React.FC<ToggleGroupComponentProps> = ({defaultValue, options, onC
 );
 
 export const StyleToggle: React.FC<ToggleProps> = ({onChange}) => {
-    return Toggle({defaultValue: 'standard', options: styleOptions, onChange: onChange});
+    const [hasActiveSubscription, setHasActiveSubscription] = useState(false);
+
+    useEffect(() => {
+        const userCookie = Cookies.get('user');
+        if (userCookie) {
+            const user = JSON.parse(userCookie);
+            setHasActiveSubscription(user.hasActiveSubscription);
+        }
+    }, []);
+
+    return <Toggle defaultValue='standard' options={styleOptions} onChange={onChange}
+                   hasActiveSubscription={hasActiveSubscription}/>;
 };
 
 export const ParagraphToggle: React.FC<ToggleProps> = ({onChange}) => {
-    return Toggle({defaultValue: '1', options: paragraphOptions, onChange: onChange});
+    const [hasActiveSubscription, setHasActiveSubscription] = useState(false);
+
+    useEffect(() => {
+        const userCookie = Cookies.get('user');
+        if (userCookie) {
+            const user = JSON.parse(userCookie);
+            setHasActiveSubscription(user.hasActiveSubscription);
+        }
+    }, []);
+
+    return <Toggle defaultValue='1' options={paragraphOptions} onChange={onChange}
+                   hasActiveSubscription={hasActiveSubscription}/>;
 };
 
 export const LanguageToggle: React.FC<ToggleProps> = ({onChange}) => {
-    return Toggle({defaultValue: 'english', options: languageOptions, onChange: onChange});
+    const [hasActiveSubscription, setHasActiveSubscription] = useState(false);
+
+    useEffect(() => {
+        const userCookie = Cookies.get('user');
+        if (userCookie) {
+            const user = JSON.parse(userCookie);
+            setHasActiveSubscription(user.hasActiveSubscription);
+        }
+    }, []);
+
+    return <Toggle defaultValue='english' options={languageOptions} onChange={onChange}
+                   hasActiveSubscription={hasActiveSubscription}/>;
 };
 
 export const GenerateToggle: React.FC<ToggleProps> = ({onChange}) => {
-    return Toggle({defaultValue: 'direct', options: generateOptions, onChange: onChange});
-};
+    const [hasActiveSubscription, setHasActiveSubscription] = useState(false);
 
+    useEffect(() => {
+        const userCookie = Cookies.get('user');
+        if (userCookie) {
+            const user = JSON.parse(userCookie);
+            setHasActiveSubscription(user.hasActiveSubscription);
+        }
+    }, []);
+
+    return <Toggle defaultValue='direct' options={generateOptions} onChange={onChange}
+                   hasActiveSubscription={hasActiveSubscription}/>;
+};
 
 export default Toggle;
