@@ -102,6 +102,13 @@ Do not include any introductory or concluding remarks. Only provide the rewritte
         const cookies = parseCookies(req.headers.get('cookie'));
         const userId = getUserIdFromCookies(cookies);
 
+        if (userId === 'anonymous') {
+            return new Response(JSON.stringify({error: 'Access denied: User not logged in'}), {
+                status: 401, // 使用 401 状态码表示未授权
+                headers: {'Content-Type': 'application/json'}
+            });
+        }
+
         console.log('User ID:', userId);
 
         // 校验用户权限

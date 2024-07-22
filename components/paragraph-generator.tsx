@@ -5,7 +5,8 @@ import {GenerateToggle, LanguageToggle, ParagraphToggle, StyleToggle} from "@/co
 import {CopyIcon, EraserIcon, Pencil2Icon} from "@radix-ui/react-icons";
 import {FormEvent, useCallback, useEffect, useRef, useState} from "react";
 import ToastComponent from '@/components/toast';
-import useDeviceInfo from '@/hooks/useDeviceInfo'; // 导入检测设备信息的 Hook
+import useDeviceInfo from '@/hooks/useDeviceInfo';
+import Cookies from "js-cookie";
 
 export default function ParagraphGenerator() {
     const [message, setMessage] = useState('');
@@ -26,8 +27,22 @@ export default function ParagraphGenerator() {
     const wordCount = message.length;
     const responseWordCount = response.length;
 
+    const checkLoginStatus = useCallback(() => {
+        const userInfo = Cookies.get('user'); // 假设 'user' cookie 存储用户信息
+        if (!userInfo) {
+            setToastMessage('Please log in to use the paragraph generator.');
+        } else {
+        }
+        return !!userInfo;
+    }, []);
+
     const handleSubmit = useCallback(async (e: FormEvent) => {
         e.preventDefault();
+
+        if (!checkLoginStatus()) {
+            return;
+        }
+
         setResponse('');
         setIsLoading(true);
         setToastMessage('Generating paragraph...');
@@ -48,7 +63,6 @@ export default function ParagraphGenerator() {
         };
 
         eventSource.onerror = (error) => {
-            console.error('EventSource failed:', error);
             eventSource.close();
             setIsLoading(false);
             setToastMessage('Generation failed');
