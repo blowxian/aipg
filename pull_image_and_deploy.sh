@@ -9,15 +9,6 @@ else
     exit 1
 fi
 
-# 清理系统
-echo "正在清理系统..."
-if docker system prune -a -f; then
-    echo "系统清理成功。"
-else
-    echo "系统清理失败！"
-    exit 1
-fi
-
 # 拉取最新的 Docker 镜像
 echo "正在拉取最新的 Docker 镜像..."
 if docker-compose -f docker-compose.prod.yml pull aipg; then
@@ -42,6 +33,15 @@ if docker-compose -f docker-compose.prod.yml up aipg -d; then
     echo "Docker 容器启动成功。"
 else
     echo "Docker 容器启动失败！"
+    exit 1
+fi
+
+# 清理系统
+echo "正在清理系统..."
+if docker system prune -a -f; then
+    echo "系统清理成功。"
+else
+    echo "系统清理失败！"
     exit 1
 fi
 
