@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 当使用阿拉伯语时，方向为右到左 */
+body[lang="ar"] {
+    direction: rtl;
+}

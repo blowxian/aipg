@@ -101,29 +101,6 @@
     "heading": "Choose the plan that suits your needs",
     "intro": "Our plans are designed to provide the best features at affordable prices.",
     "plans": {
-      "free": {
-        "title": "Free",
-        "price": "$0",
-        "originalPrice": "",
-        "duration": "/month",
-        "features": [
-          "Generate Paragraphs: 1-2 at once",
-          "Limit: 6 paragraphs / D",
-          "Language: English",
-          "Speed: Fast",
-          "Tones: 3",
-          "Paragraph Rewrite: 3 per day",
-          "Modes: 2",
-          "Words Limit Per Generate: 300",
-          "Paragraph Summarize: 3 per day",
-          "Summary Length: Default",
-          "Paragraph Expand: 3 per day",
-          "Words Limit: Up to 200 words",
-          "Support: Basic",
-          "Ads & Captcha: Yes"
-        ],
-        "buttonText": "Get started"
-      },
       "weekly": {
         "title": "Weekly",
         "price": "$4",
@@ -192,6 +169,29 @@
           "Words Limit: Unlimited",
           "Support: 24x7",
           "Ads & Captcha: No"
+        ],
+        "buttonText": "Get started"
+      },
+      "free": {
+        "title": "Free",
+        "price": "$0",
+        "originalPrice": "",
+        "duration": "/month",
+        "features": [
+          "Generate Paragraphs: 1-2 at once",
+          "Limit: 6 paragraphs / D",
+          "Language: English",
+          "Speed: Fast",
+          "Tones: 3",
+          "Paragraph Rewrite: 3 per day",
+          "Modes: 2",
+          "Words Limit Per Generate: 300",
+          "Paragraph Summarize: 3 per day",
+          "Summary Length: Default",
+          "Paragraph Expand: 3 per day",
+          "Words Limit: Up to 200 words",
+          "Support: Basic",
+          "Ads & Captcha: Yes"
         ],
         "buttonText": "Get started"
       }

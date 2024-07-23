@@ -24,7 +24,7 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale}>
-        <body>
+        <body dir={locale == 'ar' ? 'rtl' : 'ltr'}>
         <Theme accentColor="violet">
             <NextIntlClientProvider messages={messages}>
                 {children}
