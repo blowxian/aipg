@@ -4,7 +4,7 @@ import {Button} from '@radix-ui/themes';
 import {useLocale, useMessages, useTranslations} from 'next-intl';
 import Cookies from 'js-cookie';
 import {useState} from 'react';
-import {CheckIcon, Cross2Icon, RocketIcon} from "@radix-ui/react-icons";
+import {CheckIcon} from "@radix-ui/react-icons";
 
 const Price: React.FC = () => {
     const t = useTranslations('Price');
@@ -93,8 +93,8 @@ const PlanCard: React.FC<{
                                   clipRule="evenodd"></path>
                         </svg>*/}
                         <CheckIcon className={'text-green-500'}/>
-                        <Cross2Icon className={'text-red-500'}/>
-                        <RocketIcon className={'text-orange-500'}/>
+                        {/*<Cross2Icon className={'text-red-500'}/>
+                        <RocketIcon className={'text-orange-500'}/>*/}
                         <span>{feature}</span>
                     </li>
                 ))}
