@@ -51,7 +51,7 @@ const Price: React.FC = () => {
                             price={messages.Price.plans[item as keyof typeof messages.Price.plans].price}
                             originalPrice={messages.Price.plans[item as keyof typeof messages.Price.plans].originalPrice}
                             duration={messages.Price.plans[item as keyof typeof messages.Price.plans].duration}
-                            features={messages.Price.plans[item as keyof typeof messages.Price.plans].features}
+                            features={messages.Price.plans[item as keyof typeof messages.Price.plans].features as any}
                             handlePayLinkClick={() => handlePayLinkClick(item)}
                             buttonText={messages.Price.plans[item as keyof typeof messages.Price.plans].buttonText}
                         />
@@ -87,22 +87,22 @@ const PlanCard: React.FC<{
             <Button size="3" onClick={handlePayLinkClick}>{buttonText}</Button>
             <ul role="list" className="mt-8 space-y-1 text-left text-sm">
                 {features.map((feature, index) => {
-                        if (feature.icon) {
+                    if ((feature as any).icon) {
                             const iconMap = {
                                 'cross': Cross2Icon,
                                 'rocket': RocketIcon,
                                 'check': CheckIcon,
                             };
-                            const IconComponent = iconMap[feature.icon] || CheckIcon; // Default to CheckIcon if no match
+                        const IconComponent = iconMap[(feature as any).icon as keyof typeof iconMap] || CheckIcon; // Default to CheckIcon if no match
 
                             return (
                                 <li key={index} className="flex items-center space-x-3 py-1">
                                     <IconComponent className={
-                                        feature.icon === 'cross' ? 'text-red-500' :
-                                            feature.icon === 'rocket' ? 'text-orange-500' :
+                                        (feature as any).icon === 'cross' ? 'text-red-500' :
+                                            (feature as any).icon === 'rocket' ? 'text-orange-500' :
                                                 'text-green-500'
                                     }/>
-                                    <span>{feature.text}</span>
+                                    <span>{(feature as any).text}</span>
                                 </li>
                             )
                         } else {
