@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./logo";
 import {useTranslations} from 'next-intl';
+import {LinkedInLogoIcon} from "@radix-ui/react-icons";
 
 export default function Footer({border = false}: { border?: boolean }) {
     const t = useTranslations('Footer');
@@ -100,6 +101,18 @@ export default function Footer({border = false}: { border?: boolean }) {
                                         <path
                                             d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z"></path>
                                     </svg>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                                    href="https://www.linkedin.com/company/ai-paragraph-generator-for-writer"
+                                    target="_blank"
+                                    aria-label="Twitter"
+                                >
+                                    <div className="flex items-center justify-center h-8 w-8">
+                                        <LinkedInLogoIcon className="h-5 w-5"/>
+                                    </div>
                                 </Link>
                             </li>
                         </ul>

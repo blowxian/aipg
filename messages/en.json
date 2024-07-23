@@ -107,22 +107,44 @@
         "originalPrice": "",
         "duration": "/week",
         "features": [
-          "Generate Paragraphs: 1-5 at once",
-          "Limit: 50 paragraphs / W",
-          "Language: 5+",
-          "Speed: 2x faster",
-          "Tones: 5",
-          "Paragraph Rewrite: 10 per week",
-          "Modes: 4",
-          "Words Limit Per Generate: 600",
-          "Paragraph Summarize: 10 per week",
-          "Summary Length: Short, Medium",
-          "Paragraph Expand: 10 per week",
-          "Words Limit: Up to 500 words",
-          "Support: Priority",
-          "Ads & Captcha: No"
+          {
+            "icon": "check",
+            "text": "Generate: 5+ at once"
+          },
+          {
+            "icon": "check",
+            "text": "Limit: Unlimited"
+          },
+          {
+            "icon": "check",
+            "text": "Language: 14+"
+          },
+          {
+            "icon": "rocket",
+            "text": "Speed: 2x faster"
+          },
+          {
+            "icon": "check",
+            "text": "Tones: 13+"
+          },
+          {
+            "icon": "check",
+            "text": "Search Mode"
+          },
+          {
+            "icon": "check",
+            "text": "Chars Limit: 500 / Para"
+          },
+          {
+            "icon": "check",
+            "text": "Support: Priority"
+          },
+          {
+            "icon": "check",
+            "text": "No Ads & Captcha"
+          }
         ],
-        "buttonText": "Get started"
+        "buttonText": "Purchase"
       },
       "monthly": {
         "title": "Monthly",
@@ -130,23 +152,44 @@
         "originalPrice": "$16",
         "duration": "/month",
         "features": [
-          "Generate Paragraphs: 1-5 at once",
-          "Limit: Unlimited",
-          "Language: 14+",
-          "Speed: 3x faster",
-          "Tones: 13+",
-          "Paragraph Rewrite: Unlimited",
-          "Modes: 8+",
-          "Search Mode included: Yes",
-          "Words Limit Per Generate: 1500+",
-          "Paragraph Summarize: Unlimited",
-          "Summary Length: Short, Medium, Long",
-          "Paragraph Expand: Unlimited",
-          "Words Limit: Unlimited",
-          "Support: 24x7",
-          "Ads & Captcha: No"
+          {
+            "icon": "check",
+            "text": "Generate: 5+ at once"
+          },
+          {
+            "icon": "check",
+            "text": "Limit: Unlimited"
+          },
+          {
+            "icon": "check",
+            "text": "Language: 14+"
+          },
+          {
+            "icon": "rocket",
+            "text": "Speed: 3x faster"
+          },
+          {
+            "icon": "check",
+            "text": "Tones: 13+"
+          },
+          {
+            "icon": "check",
+            "text": "Search Mode"
+          },
+          {
+            "icon": "check",
+            "text": "Chars Limit: 1500 / Para"
+          },
+          {
+            "icon": "check",
+            "text": "Support: 24x7"
+          },
+          {
+            "icon": "check",
+            "text": "No Ads & Captcha"
+          }
         ],
-        "buttonText": "Get started"
+        "buttonText": "Purchase"
       },
       "yearly": {
         "title": "Yearly",
@@ -154,23 +197,44 @@
         "originalPrice": "$192",
         "duration": "/year",
         "features": [
-          "Generate Paragraphs: 1-5 at once",
-          "Limit: Unlimited",
-          "Language: 14+",
-          "Speed: 3x faster",
-          "Tones: 13+",
-          "Paragraph Rewrite: Unlimited",
-          "Modes: 8+",
-          "Search Mode included: Yes",
-          "Words Limit Per Generate: 1500+",
-          "Paragraph Summarize: Unlimited",
-          "Summary Length: Short, Medium, Long",
-          "Paragraph Expand: Unlimited",
-          "Words Limit: Unlimited",
-          "Support: 24x7",
-          "Ads & Captcha: No"
+          {
+            "icon": "check",
+            "text": "Generate: 5+ at once"
+          },
+          {
+            "icon": "check",
+            "text": "Limit: Unlimited"
+          },
+          {
+            "icon": "check",
+            "text": "Language: 14+"
+          },
+          {
+            "icon": "rocket",
+            "text": "Speed: 3x faster"
+          },
+          {
+            "icon": "check",
+            "text": "Tones: 13+"
+          },
+          {
+            "icon": "check",
+            "text": "Search Mode"
+          },
+          {
+            "icon": "check",
+            "text": "Chars Limit: 1500 / Para"
+          },
+          {
+            "icon": "check",
+            "text": "Support: 24x7"
+          },
+          {
+            "icon": "check",
+            "text": "No Ads & Captcha"
+          }
         ],
-        "buttonText": "Get started"
+        "buttonText": "Purchase"
       },
       "free": {
         "title": "Free",
@@ -178,20 +242,42 @@
         "originalPrice": "",
         "duration": "",
         "features": [
-          "Generate Paragraphs: 1-2 at once",
-          "Limit: 6 paragraphs / D",
-          "Language: English",
-          "Speed: Fast",
-          "Tones: 3",
-          "Paragraph Rewrite: 3 per day",
-          "Modes: 2",
-          "Words Limit Per Generate: 300",
-          "Paragraph Summarize: 3 per day",
-          "Summary Length: Default",
-          "Paragraph Expand: 3 per day",
-          "Words Limit: Up to 200 words",
-          "Support: Basic",
-          "Ads & Captcha: Yes"
+          {
+            "icon": "check",
+            "text": "Generate: 1-2 at once"
+          },
+          {
+            "icon": "check",
+            "text": "Limit: 6 Paras / D"
+          },
+          {
+            "icon": "check",
+            "text": "Language: English"
+          },
+          {
+            "icon": "check",
+            "text": "Speed: Normal"
+          },
+          {
+            "icon": "check",
+            "text": "Tones: 3"
+          },
+          {
+            "icon": "cross",
+            "text": "Search Mode"
+          },
+          {
+            "icon": "check",
+            "text": "Chars Limit: 200 / Para"
+          },
+          {
+            "icon": "cross",
+            "text": "Support: No"
+          },
+          {
+            "icon": "cross",
+            "text": "No Ads & Captcha"
+          }
         ],
         "buttonText": "Get started"
       }

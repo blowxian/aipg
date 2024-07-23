@@ -8,7 +8,10 @@ import "../css/style.css";
 
 export const metadata: Metadata = {
     title: "AI Paragraph Generator for writer",
-    description: "AI Paragraph Generator is a powerful tool that transforms your ideas into well-structured and engaging paragraphs. Artificial Intelligence Paragraph Generator meets all your content needs, from blogs to academic papers, with our tool ensuring originality, relevance and professionalism in every use case."
+    description: "AI Paragraph Generator is a powerful tool that transforms your ideas into well-structured and engaging paragraphs. Artificial Intelligence Paragraph Generator meets all your content needs, from blogs to academic papers, with our tool ensuring originality, relevance and professionalism in every use case.",
+    other: {
+        _foundr: "c936f26cdf45732ab1de53d2c832d889"
+    }
 };
 
 export default async function LocaleLayout({
