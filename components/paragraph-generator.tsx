@@ -14,7 +14,7 @@ export default function ParagraphGenerator() {
     const [paragraph, setParagraph] = useState('');
     const [language, setLanguage] = useState('');
     const [generate, setGenerate] = useState('');
-    const maxLength = 100;
+    const [maxLength, setMaxLength] = useState(100);
 
     const [response, setResponse] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -37,7 +37,7 @@ export default function ParagraphGenerator() {
         const userInfo = Cookies.get('user'); // 假设 'user' cookie 存储用户信息
         if (!userInfo) {
             showToast('Please log in to use the paragraph generator.');
-        } else {
+            // todo: show login btn;
         }
         return !!userInfo;
     }, []);
@@ -45,9 +45,9 @@ export default function ParagraphGenerator() {
     const handleSubmit = useCallback(async (e: FormEvent) => {
         e.preventDefault();
 
-        /*if (!checkLoginStatus()) {
+        if (!checkLoginStatus()) {
             return;
-        }*/
+        }
 
         setResponse('');
         setIsLoading(true);
@@ -110,6 +110,14 @@ export default function ParagraphGenerator() {
         });
     }, [response]);
 
+    const updateMaxLength = () => {
+        const userCookie = Cookies.get('user');
+        if (userCookie) {
+            const user = JSON.parse(userCookie);
+            setMaxLength(user.hasActiveSubscription ? 1500 : 100);
+        }
+    };
+
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (isLoading) {
@@ -137,9 +145,12 @@ export default function ParagraphGenerator() {
     }, [handleSubmit, handleClear, handleCopy, isLoading]);
 
     useEffect(() => {
+        updateMaxLength();
+
         // 将回调函数绑定到 window 对象上
         (window as any).triggerParagraphGeneratorUpdate = () => {
             setUpdateTrigger(prev => !prev);
+            updateMaxLength();
         };
 
         // 清理函数
@@ -194,7 +205,7 @@ export default function ParagraphGenerator() {
                                 placeholder="e.g. Write a paragraph on Research on the history of the internet"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
-                                maxLength={maxLength * 6}
+                                maxLength={maxLength}
                                 size="3"
                             />
                             <div className="absolute bottom-2 left-2 text-sm text-gray-500">

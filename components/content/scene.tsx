@@ -35,13 +35,13 @@ export default function Scene() {
                                 <Card size="2" className="h-full">
                                     <Inset clip="padding-box" side="top" pb="current">
                                         <img
-                                            src="/img/blogging.svg"
+                                            src="/img/blogging.webp"
                                             alt="Bold typography"
                                             style={{
                                                 display: 'block',
                                                 objectFit: 'cover',
                                                 width: '100%',
-                                                height: 140,
+                                                height: 256,
                                                 backgroundColor: 'var(--gray-5)',
                                             }}
                                         />
@@ -56,13 +56,13 @@ export default function Scene() {
                                 <Card size="2" className="h-full">
                                     <Inset clip="padding-box" side="top" pb="current">
                                         <img
-                                            src="/img/articles.svg"
+                                            src="/img/articles.webp"
                                             alt="Bold typography"
                                             style={{
                                                 display: 'block',
                                                 objectFit: 'cover',
                                                 width: '100%',
-                                                height: 140,
+                                                height: 256,
                                                 backgroundColor: 'var(--gray-5)',
                                             }}
                                         />
@@ -77,13 +77,13 @@ export default function Scene() {
                                 <Card size="2" className="h-full">
                                     <Inset clip="padding-box" side="top" pb="current">
                                         <img
-                                            src="/img/product-description.svg"
+                                            src="/img/product-description.webp"
                                             alt="Bold typography"
                                             style={{
                                                 display: 'block',
                                                 objectFit: 'cover',
                                                 width: '100%',
-                                                height: 140,
+                                                height: 256,
                                                 backgroundColor: 'var(--gray-5)',
                                             }}
                                         />
@@ -108,13 +108,13 @@ export default function Scene() {
                                 <Card size="2" className="h-full">
                                     <Inset clip="padding-box" side="top" pb="current">
                                         <img
-                                            src="/img/essays.svg"
+                                            src="/img/essays.webp"
                                             alt="Bold typography"
                                             style={{
                                                 display: 'block',
                                                 objectFit: 'cover',
                                                 width: '100%',
-                                                height: 140,
+                                                height: 256,
                                                 backgroundColor: 'var(--gray-5)',
                                             }}
                                         />
@@ -129,13 +129,13 @@ export default function Scene() {
                                 <Card size="2" className="h-full">
                                     <Inset clip="padding-box" side="top" pb="current">
                                         <img
-                                            src="/img/research-articles.svg"
+                                            src="/img/research-articles.webp"
                                             alt="Bold typography"
                                             style={{
                                                 display: 'block',
                                                 objectFit: 'cover',
                                                 width: '100%',
-                                                height: 140,
+                                                height: 256,
                                                 backgroundColor: 'var(--gray-5)',
                                             }}
                                         />
@@ -150,13 +150,13 @@ export default function Scene() {
                                 <Card size="2" className="h-full">
                                     <Inset clip="padding-box" side="top" pb="current">
                                         <img
-                                            src="/img/papers.svg"
+                                            src="/img/papers.webp"
                                             alt="Bold typography"
                                             style={{
                                                 display: 'block',
                                                 objectFit: 'cover',
                                                 width: '100%',
-                                                height: 140,
+                                                height: 256,
                                                 backgroundColor: 'var(--gray-5)',
                                             }}
                                         />
@@ -181,13 +181,13 @@ export default function Scene() {
                                 <Card size="2" className="h-full">
                                     <Inset clip="padding-box" side="top" pb="current">
                                         <img
-                                            src="/img/emails.svg"
+                                            src="/img/emails.webp"
                                             alt="Bold typography"
                                             style={{
                                                 display: 'block',
                                                 objectFit: 'cover',
                                                 width: '100%',
-                                                height: 140,
+                                                height: 388,
                                                 backgroundColor: 'var(--gray-5)',
                                             }}
                                         />
@@ -202,13 +202,13 @@ export default function Scene() {
                                 <Card size="2" className="h-full">
                                     <Inset clip="padding-box" side="top" pb="current">
                                         <img
-                                            src="/img/personal-letters.svg"
+                                            src="/img/personal-letters.webp"
                                             alt="Bold typography"
                                             style={{
                                                 display: 'block',
                                                 objectFit: 'cover',
                                                 width: '100%',
-                                                height: 140,
+                                                height: 388,
                                                 backgroundColor: 'var(--gray-5)',
                                             }}
                                         />
