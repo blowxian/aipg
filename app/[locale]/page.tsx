@@ -9,6 +9,7 @@ import ParagraphGenerator from "@/components/paragraph-generator";
 import Price from "@/components/content/price";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
+import LogoCarousel from "@/components/content/logo-carousel";
 
 export default function Home() {
     const t = useTranslations('Home' as any);
@@ -24,6 +25,7 @@ export default function Home() {
                              className="mt-0 md:mt-2 !text-xs md:!text-xl !text-gray-500 !font-light !italic">{t("subtitle" as never)}</Heading>
                 </Section>
                 <ParagraphGenerator/>
+                <LogoCarousel/>
                 <Scene/>
                 <Highlight/>
                 <Benefit/>
