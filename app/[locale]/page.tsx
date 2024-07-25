@@ -11,12 +11,10 @@ import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import LogoCarousel from "@/components/content/logo-carousel";
 import {getLocale} from "next-intl/server";
-import {Metadata, ResolvingMetadata} from "next";
+import {Metadata} from "next";
 
 
-export async function generateMetadata(
-    parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
     const locale = await getLocale();
 
     return locale === 'en' ? {
