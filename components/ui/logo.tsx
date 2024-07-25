@@ -11,8 +11,8 @@ export default function Logo() {
                 </g>
                 <defs>
                     <filter id="filter0_d_0_1" x="41.8071" y="43.2" width="354.405" height="148.4"
-                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                                        result="hardAlpha"/>
                         <feOffset dx="2" dy="2"/>

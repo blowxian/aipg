@@ -30,57 +30,57 @@ export default function Header() {
         console.log('Stored User:', storedUser);
         if (storedUser) {
             setUser(JSON.parse(storedUser));
-        }
+        } else {
+            // 初始化 Google One Tap 登录
+            const loadGoogleScript = () => {
+                const script = document.createElement('script');
+                script.src = "https://accounts.google.com/gsi/client";
+                script.async = true;
 
-        // 初始化 Google One Tap 登录
-        const loadGoogleScript = () => {
-            const script = document.createElement('script');
-            script.src = "https://accounts.google.com/gsi/client";
-            script.async = true;
-
-            document.body.appendChild(script);
-        };
-
-        const googleLoginCallback = async (response: GoogleLoginResponse) => {
-            const credential = response.credential;
-            console.log('Credential:', credential);
-
-            // Decode the credential
-            const base64Url = credential.split('.')[1];
-            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-            const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
-                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-            }).join(''));
-
-            const userInfo = JSON.parse(jsonPayload);
-            console.log('User Info:', userInfo);
-            const userData = {
-                name: userInfo.name,
-                avatar: userInfo.picture,
-                email: userInfo.email,
+                document.body.appendChild(script);
             };
-            setUser(userData);
 
-            // 将用户信息发送到服务器
-            const auth_response = await fetch('/api/auth', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(userData),
-            });
+            const googleLoginCallback = async (response: GoogleLoginResponse) => {
+                const credential = response.credential;
+                console.log('Credential:', credential);
 
-            if (!auth_response.ok) {
-                console.error('Failed to save user information');
-            } else {
-                // 触发重新渲染
-                (window as any).triggerParagraphGeneratorUpdate();
+                // Decode the credential
+                const base64Url = credential.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+
+                const userInfo = JSON.parse(jsonPayload);
+                console.log('User Info:', userInfo);
+                const userData = {
+                    name: userInfo.name,
+                    avatar: userInfo.picture,
+                    email: userInfo.email,
+                };
+                setUser(userData);
+
+                // 将用户信息发送到服务器
+                const auth_response = await fetch('/api/auth', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(userData),
+                });
+
+                if (!auth_response.ok) {
+                    console.error('Failed to save user information');
+                } else {
+                    // 触发重新渲染
+                    (window as any).triggerParagraphGeneratorUpdate();
+                }
+            };
+
+            if (typeof window !== 'undefined') {
+                (window as any).googleLoginCallback = googleLoginCallback;
+                loadGoogleScript();
             }
-        };
-
-        if (typeof window !== 'undefined') {
-            (window as any).googleLoginCallback = googleLoginCallback;
-            loadGoogleScript();
         }
     }, []);
 

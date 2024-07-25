@@ -55,7 +55,7 @@ const LogoCarousel: React.FC = () => {
             <Slider {...settings}>
                 {logos.map((logo, index) => (
                     <div key={index} className="flex justify-center items-center px-2 w-full">
-                        <Image src={logo} alt={`Logo ${index + 1}`} width={120} height={120} objectFit="contain"
+                        <Image src={logo} alt={`Logo ${index + 1}`} width={80} height={80}
                                className="mx-auto"/>
                     </div>
                 ))}

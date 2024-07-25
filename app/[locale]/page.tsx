@@ -10,6 +10,21 @@ import Price from "@/components/content/price";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import LogoCarousel from "@/components/content/logo-carousel";
+import {getLocale} from "next-intl/server";
+import {Metadata, ResolvingMetadata} from "next";
+
+
+export async function generateMetadata(
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const locale = await getLocale();
+
+    return locale === 'en' ? {
+        alternates: {
+            canonical: 'https://aiparagraphgenerator.net/',
+        }
+    } : {};
+}
 
 export default function Home() {
     const t = useTranslations('Home' as any);
