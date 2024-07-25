@@ -145,6 +145,20 @@ export default function Footer({border = false}: { border?: boolean }) {
                                     </div>
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                                    href="https://www.producthunt.com/posts/ai-paragraph-generator-for-writer"
+                                    target="_blank"
+                                    aria-label="Reddit"
+                                    rel="nofollow"
+                                >
+                                    <div className="h-8 w-8 flex items-center justify-center">
+                                        <Image src="/logo/producthunt.svg" alt="Producthunt Logo" width={20}
+                                               height={20}/>
+                                    </div>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

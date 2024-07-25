@@ -40,17 +40,26 @@ export default function Home() {
                              className="mt-0 md:mt-2 !text-xs md:!text-xl !text-gray-500 !font-light !italic">{t("subtitle" as never)}</Heading>
                 </Section>
                 <ParagraphGenerator/>
+                <LogoCarousel/>
                 <Section
-                    className="content bg-white p-6 w-full min-h-60 rounded-md mx-auto mb-8">
+                    className="px-3 md:px-0 !py-6 md:!py-8">
+                    <Heading as="h2" align="center" className="my-2 md:my-6 pt-10 md:pt-12 !text-xl md:!text-3xl">
+                        How to use AI Paragraph Generator for Writers</Heading>
                     <LazyLoadYouTube videoId="FGTbBB7x6E4"/>
                 </Section>
-                <LogoCarousel/>
                 <Scene/>
                 <Highlight/>
                 <Benefit/>
                 <Overcome/>
                 <FAQ/>
                 <Price/>
+                <Section className="!py-3 md:!py-6 !pb-8 md:!pb-28">
+                    <a href="https://www.producthunt.com/posts/ai-paragraph-generator-for-writer?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;paragraph&#0045;generator&#0045;for&#0045;writer"
+                       target="_blank"><img
+                        src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=473413&theme=light"
+                        alt="AI&#0032;Paragraph&#0032;Generator&#0032;for&#0032;writer - AI&#0032;Paragraph&#0032;Generator&#0032;for&#0032;writer | Product Hunt"
+                        style={{width: "250px", height: "54px"}} width="250" height="54" className="mx-auto"/></a>
+                </Section>
             </Container>
             <Footer border={true}/>
         </>
