@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss';
+import type {Config} from 'tailwindcss';
 import {blackA, green, mauve, slate, violet} from '@radix-ui/colors';
 
 const config: Config = {
@@ -41,7 +41,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 } as any;
 
 export default config;

@@ -12,7 +12,9 @@ import Header from "@/components/ui/header";
 import LogoCarousel from "@/components/content/logo-carousel";
 import {getLocale} from "next-intl/server";
 import {Metadata} from "next";
+import dynamic from "next/dynamic";
 
+const LazyLoadYouTube = dynamic(() => import('@/components/lazy-load-youtube'), {ssr: false});
 
 export async function generateMetadata(): Promise<Metadata> {
     const locale = await getLocale();
@@ -38,6 +40,10 @@ export default function Home() {
                              className="mt-0 md:mt-2 !text-xs md:!text-xl !text-gray-500 !font-light !italic">{t("subtitle" as never)}</Heading>
                 </Section>
                 <ParagraphGenerator/>
+                <Section
+                    className="content bg-white p-6 w-full min-h-60 rounded-md mx-auto mb-8">
+                    <LazyLoadYouTube videoId="FGTbBB7x6E4"/>
+                </Section>
                 <LogoCarousel/>
                 <Scene/>
                 <Highlight/>
