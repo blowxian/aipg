@@ -42,7 +42,8 @@ export default function Scene() {
                                             position: 'relative',
                                             width: '100%',
                                             height: '256px',
-                                            backgroundColor: 'var(--gray-5)'
+                                            backgroundColor: 'var(--gray-5)',
+                                            overflow: 'hidden'
                                         }}>
                                             <Image
                                                 src="/img/blogging.webp"
@@ -64,7 +65,8 @@ export default function Scene() {
                                             position: 'relative',
                                             width: '100%',
                                             height: '256px',
-                                            backgroundColor: 'var(--gray-5)'
+                                            backgroundColor: 'var(--gray-5)',
+                                            overflow: 'hidden'
                                         }}>
                                             <Image
                                                 src="/img/articles.webp"
@@ -86,7 +88,8 @@ export default function Scene() {
                                             position: 'relative',
                                             width: '100%',
                                             height: '256px',
-                                            backgroundColor: 'var(--gray-5)'
+                                            backgroundColor: 'var(--gray-5)',
+                                            overflow: 'hidden'
                                         }}>
                                             <Image
                                                 src="/img/product-description.webp"
@@ -118,7 +121,8 @@ export default function Scene() {
                                             position: 'relative',
                                             width: '100%',
                                             height: '256px',
-                                            backgroundColor: 'var(--gray-5)'
+                                            backgroundColor: 'var(--gray-5)',
+                                            overflow: 'hidden'
                                         }}>
                                             <Image
                                                 src="/img/essays.webp"
@@ -140,7 +144,8 @@ export default function Scene() {
                                             position: 'relative',
                                             width: '100%',
                                             height: '256px',
-                                            backgroundColor: 'var(--gray-5)'
+                                            backgroundColor: 'var(--gray-5)',
+                                            overflow: 'hidden'
                                         }}>
                                             <Image
                                                 src="/img/research-articles.webp"
@@ -162,7 +167,8 @@ export default function Scene() {
                                             position: 'relative',
                                             width: '100%',
                                             height: '256px',
-                                            backgroundColor: 'var(--gray-5)'
+                                            backgroundColor: 'var(--gray-5)',
+                                            overflow: 'hidden'
                                         }}>
                                             <Image
                                                 src="/img/papers.webp"
@@ -194,7 +200,8 @@ export default function Scene() {
                                             position: 'relative',
                                             width: '100%',
                                             height: '256px',
-                                            backgroundColor: 'var(--gray-5)'
+                                            backgroundColor: 'var(--gray-5)',
+                                            overflow: 'hidden'
                                         }}>
                                             <Image
                                                 src="/img/emails.webp"
@@ -216,7 +223,8 @@ export default function Scene() {
                                             position: 'relative',
                                             width: '100%',
                                             height: '256px',
-                                            backgroundColor: 'var(--gray-5)'
+                                            backgroundColor: 'var(--gray-5)',
+                                            overflow: 'hidden'
                                         }}>
                                             <Image
                                                 src="/img/personal-letters.webp"

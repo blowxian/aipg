@@ -13,6 +13,7 @@ const logos = [
     '/logo/linkedin.svg',
     '/logo/tiktok.svg',
     '/logo/google.svg',
+    '/logo/reddit.svg'
     // 添加更多 logo 路径
 ];
 

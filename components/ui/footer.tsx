@@ -2,6 +2,8 @@ import Link from "next/link";
 import Logo from "./logo";
 import {useTranslations} from 'next-intl';
 import {LinkedInLogoIcon} from "@radix-ui/react-icons";
+import Image from "next/image";
+import React from "react";
 
 export default function Footer({border = false}: { border?: boolean }) {
     const t = useTranslations('Footer');
@@ -89,9 +91,23 @@ export default function Footer({border = false}: { border?: boolean }) {
                             <li>
                                 <Link
                                     className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                                    href="https://www.youtube.com/channel/UCxZ1EzmSiqvSwqhEFKGH82A"
+                                    target="_blank"
+                                    aria-label="Reddit"
+                                    rel="nofollow"
+                                >
+                                    <div className="h-8 w-8 flex items-center justify-center">
+                                        <Image src="/logo/youtube.svg" alt="Youtube Logo" width={20} height={20}/>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
                                     href="https://x.com/GstarWd99611"
                                     target="_blank"
                                     aria-label="Twitter"
+                                    rel="nofollow"
                                 >
                                     <svg
                                         className="h-8 w-8 fill-current"
@@ -108,10 +124,24 @@ export default function Footer({border = false}: { border?: boolean }) {
                                     className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
                                     href="https://www.linkedin.com/company/ai-paragraph-generator-for-writer"
                                     target="_blank"
-                                    aria-label="Twitter"
+                                    aria-label="Linkedin"
+                                    rel="nofollow"
                                 >
                                     <div className="flex items-center justify-center h-8 w-8">
                                         <LinkedInLogoIcon className="h-5 w-5"/>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                                    href="https://www.reddit.com/r/AIParagraphGenerator"
+                                    target="_blank"
+                                    aria-label="Reddit"
+                                    rel="nofollow"
+                                >
+                                    <div className="h-8 w-8 flex items-center justify-center">
+                                        <Image src="/logo/reddit.svg" alt="Reddit Logo" width={20} height={20}/>
                                     </div>
                                 </Link>
                             </li>
