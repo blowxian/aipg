@@ -49,7 +49,7 @@ const LogoCarousel: React.FC = () => {
     };
 
     return (
-        <Section className="py-8">
+        <Section className="py-8 overflow-x-hidden">
             <Heading as="h2" align="center" className="my-2 md:my-6 pt-10 md:pt-12 !text-xl md:!text-3xl">
                 Employees Using Our Products
             </Heading>

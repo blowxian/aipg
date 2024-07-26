@@ -4,6 +4,7 @@ import {useTranslations} from 'next-intl';
 import {LinkedInLogoIcon} from "@radix-ui/react-icons";
 import Image from "next/image";
 import React from "react";
+import LanguageSwitcher from "@/components/language-switcher";
 
 export default function Footer({border = false}: { border?: boolean }) {
     const t = useTranslations('Footer');
@@ -21,6 +22,7 @@ export default function Footer({border = false}: { border?: boolean }) {
                             <Logo/>
                         </div>
                         <div className="text-sm text-gray-600" dangerouslySetInnerHTML={{__html: t("company")}}/>
+                        <LanguageSwitcher/>
                     </div>
 
                     {/* 2nd block */}
