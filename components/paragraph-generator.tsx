@@ -102,7 +102,7 @@ export default function ParagraphGenerator() {
 
     const handleCopy = useCallback(() => {
         navigator.clipboard.writeText(response).then(() => {
-            console.log('Text copied to clipboard');
+            // console.log('Text copied to clipboard');
             showToast('Paragraphs copied');
         }).catch(err => {
             console.error('Could not copy text: ', err);

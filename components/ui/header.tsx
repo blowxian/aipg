@@ -27,7 +27,7 @@ export default function Header() {
     useEffect(() => {
         // 从 cookie 中获取用户信息
         const storedUser = Cookies.get('user');
-        console.log('Stored User:', storedUser);
+        // console.log('Stored User:', storedUser);
         if (storedUser) {
             setUser(JSON.parse(storedUser));
         } else {
@@ -42,7 +42,7 @@ export default function Header() {
 
             const googleLoginCallback = async (response: GoogleLoginResponse) => {
                 const credential = response.credential;
-                console.log('Credential:', credential);
+                // console.log('Credential:', credential);
 
                 // Decode the credential
                 const base64Url = credential.split('.')[1];
@@ -52,7 +52,7 @@ export default function Header() {
                 }).join(''));
 
                 const userInfo = JSON.parse(jsonPayload);
-                console.log('User Info:', userInfo);
+                // console.log('User Info:', userInfo);
                 const userData = {
                     name: userInfo.name,
                     avatar: userInfo.picture,
