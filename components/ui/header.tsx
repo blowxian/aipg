@@ -3,10 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "./logo";
-import {Flex} from "@radix-ui/themes";
+import {Box, Flex} from "@radix-ui/themes";
 import {useEffect, useState} from "react";
 import Cookies from "js-cookie";
 import {useTranslations} from "next-intl";
+import LanguageSwitcher from "@/components/language-switcher";
 
 // 定义用户信息的类型
 interface User {
@@ -100,6 +101,9 @@ export default function Header() {
                     </Flex>
 
                     <Flex>
+                        <Box className="mr-4">
+                            <LanguageSwitcher/>
+                        </Box>
                         {user ? (
                             <div className="relative">
                                 <Image
