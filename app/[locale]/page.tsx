@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // 生成 languages 对象，同时跳过当前 locale
     const languageAlternates = languages.reduce((acc, lang) => {
         if (lang.code !== locale) {
-            acc[lang.code] = lang.code === 'en' ? '/' : `/${lang.code}`;
+            acc[lang.code] = 'https://aiparagraphgenerator.net/' + (lang.code === 'en' ? '' : `${lang.code}`);
         }
         return acc;
     }, {} as Record<string, string>);
