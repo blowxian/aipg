@@ -33,7 +33,7 @@ const MarketingPopup = () => {
                     const startTime = new Date();
                     Cookies.set('popup_start_time', startTime.toISOString());
                     setCountdown(3600);
-                }, 500);
+                }, 1000 * 60);
 
                 return () => clearTimeout(timer);
             }
@@ -54,7 +54,7 @@ const MarketingPopup = () => {
         setIsMinimized(!isMinimized);
     };
 
-    const formatTime = (seconds) => {
+    const formatTime = (seconds: number) => {
         const hrs = Math.floor(seconds / 3600);
         const mins = Math.floor((seconds % 3600) / 60);
         const secs = seconds % 60;
@@ -75,7 +75,7 @@ const MarketingPopup = () => {
         }
     };
 
-    const handlePayLinkClick = (plan) => {
+    const handlePayLinkClick = (plan: string) => {
         const user = getUserFromCookies();
         if (!user) {
             alert("Please login first!");
