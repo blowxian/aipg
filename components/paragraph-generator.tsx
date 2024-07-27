@@ -7,6 +7,7 @@ import {FormEvent, useCallback, useEffect, useRef, useState} from "react";
 import ToastComponent from '@/components/toast';
 import useDeviceInfo from '@/hooks/useDeviceInfo';
 import Cookies from "js-cookie";
+import {useRouter} from 'next/navigation';
 
 export default function ParagraphGenerator() {
     const [message, setMessage] = useState('');
@@ -24,6 +25,7 @@ export default function ParagraphGenerator() {
     const [updateTrigger, setUpdateTrigger] = useState(false); // 新增状态用于触发更新
 
     const {deviceType, os} = useDeviceInfo(); // 使用检测设备信息的 Hook
+    const router = useRouter(); // 使用 next/navigation 提供的 useRouter
 
     const wordCount = message.length;
     const responseWordCount = response.length;
@@ -158,6 +160,18 @@ export default function ParagraphGenerator() {
             delete (window as any).triggerParagraphGeneratorUpdate;
         };
     }, []);
+
+    // 新增代码，用于从路径中提取 keywords 并填入 message 状态
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const keywords = params.get('keywords');
+        if (keywords) {
+            setMessage(keywords);
+            if (textAreaRef.current) {
+                (textAreaRef.current as any).focus();
+            }
+        }
+    }, [router]); // 当 router 变化时重新执行
 
     const renderClearShortcut = () => {
         if (deviceType === 'desktop') {
