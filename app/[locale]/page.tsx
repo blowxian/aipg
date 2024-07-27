@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
     return {
         alternates: {
-            canonical: 'https://aiparagraphgenerator.net/' + (locale === 'en' ? '' : `/${locale}`),
+            canonical: 'https://aiparagraphgenerator.net/' + (locale === 'en' ? '' : `${locale}`),
             languages: languageAlternates as any,
         }
     };
