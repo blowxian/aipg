@@ -20,9 +20,11 @@ const LazyLoadYouTube = dynamic(() => import('@/components/lazy-load-youtube'), 
 export async function generateMetadata(): Promise<Metadata> {
     const locale = await getLocale();
 
-    // Generate the languages object dynamically
+// 生成 languages 对象，同时跳过当前 locale
     const languageAlternates = languages.reduce((acc, lang) => {
-        acc[lang.code] = lang.code === 'en' ? '/' : `/${lang.code}`;
+        if (lang.code !== locale) {
+            acc[lang.code] = lang.code === 'en' ? '/' : `/${lang.code}`;
+        }
         return acc;
     }, {} as Record<string, string>);
 
