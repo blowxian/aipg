@@ -13,23 +13,15 @@ import LogoCarousel from "@/components/content/logo-carousel";
 import {getLocale} from "next-intl/server";
 import {Metadata} from "next";
 import dynamic from "next/dynamic";
-import languages from "@/constants/languages";
 
 const LazyLoadYouTube = dynamic(() => import('@/components/lazy-load-youtube'), {ssr: false});
 
 export async function generateMetadata(): Promise<Metadata> {
     const locale = await getLocale();
 
-// 生成 languages 对象，同时跳过当前 locale
-    const languageAlternates = languages.reduce((acc, lang) => {
-        acc[lang.code] = 'https://aiparagraphgenerator.net/' + (lang.code === 'en' ? '' : `${lang.code}`);
-        return acc;
-    }, {} as Record<string, string>);
-
     return {
         alternates: {
             canonical: 'https://aiparagraphgenerator.net/' + (locale === 'en' ? '' : `${locale}`),
-            languages: languageAlternates as any,
         }
     };
 }

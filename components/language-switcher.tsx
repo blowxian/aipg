@@ -42,7 +42,7 @@ const LanguageSwitcher = () => {
     const router = useRouter();
 
     const handleLanguageChange = (locale: string) => {
-        router.push(`/${locale}`);
+        router.push(locale === 'en' ? '/' : `/${locale}`);
     };
 
     return (
