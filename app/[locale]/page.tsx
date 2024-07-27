@@ -14,6 +14,7 @@ import {getLocale} from "next-intl/server";
 import {Metadata} from "next";
 import dynamic from "next/dynamic";
 import languages from "@/constants/languages";
+import MarketingPopup from "@/components/marketing-popup";
 
 const LazyLoadYouTube = dynamic(() => import('@/components/lazy-load-youtube'), {ssr: false});
 
@@ -68,6 +69,7 @@ export default function Home() {
                         alt="AI&#0032;Paragraph&#0032;Generator&#0032;for&#0032;writer - AI&#0032;Paragraph&#0032;Generator&#0032;for&#0032;writer | Product Hunt"
                         style={{width: "250px", height: "54px"}} width="250" height="54"/></a>
                 </Section>
+                <MarketingPopup/>
             </Container>
             <Footer border={true}/>
         </>
