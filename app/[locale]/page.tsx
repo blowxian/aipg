@@ -29,12 +29,10 @@ export async function generateMetadata(): Promise<Metadata> {
     }, {} as Record<string, string>);
 
     return {
-        alternates: locale === 'en' ? {
-            canonical: 'https://aiparagraphgenerator.net',
+        alternates: {
+            canonical: 'https://aiparagraphgenerator.net/' + (locale === 'en' ? '' : `${locale}`),
             languages: languageAlternates as any,
-        } : {
-            languages: languageAlternates as any,
-        },
+        }
     };
 }
 
