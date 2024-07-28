@@ -9,7 +9,6 @@ import ParagraphGenerator from "@/components/paragraph-generator";
 import Price from "@/components/content/price";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
-import LogoCarousel from "@/components/content/logo-carousel";
 import {getLocale} from "next-intl/server";
 import {Metadata} from "next";
 import dynamic from "next/dynamic";
@@ -49,7 +48,6 @@ export default function Home() {
                              className="mt-0 md:mt-2 !text-xs md:!text-xl !text-gray-500 !font-light !italic">{t("subtitle" as never)}</Heading>
                 </Section>
                 <ParagraphGenerator/>
-                <LogoCarousel/>
                 <Section
                     className="px-3 md:px-0 !py-6 md:!py-8">
                     <Heading as="h2" align="center" className="my-2 md:my-6 pt-10 md:pt-12 !text-xl md:!text-3xl">
