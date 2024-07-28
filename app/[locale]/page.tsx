@@ -9,7 +9,7 @@ import ParagraphGenerator from "@/components/paragraph-generator";
 import Price from "@/components/content/price";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
-import {getLocale} from "next-intl/server";
+import {getLocale, getTranslations} from "next-intl/server";
 import {Metadata} from "next";
 import dynamic from "next/dynamic";
 import languages from "@/constants/languages";
@@ -19,6 +19,7 @@ const LazyLoadYouTube = dynamic(() => import('@/components/lazy-load-youtube'), 
 
 export async function generateMetadata(): Promise<Metadata> {
     const locale = await getLocale();
+    const t = await getTranslations({locale, namespace: 'Home'});
 
 // 生成 languages 对象，同时跳过当前 locale
     const languageAlternates = languages.reduce((acc, lang) => {
@@ -27,6 +28,8 @@ export async function generateMetadata(): Promise<Metadata> {
     }, {} as Record<string, string>);
 
     return {
+        title: t("title"),
+        description: t("description"),
         alternates: {
             canonical: 'https://aiparagraphgenerator.net/' + (locale === 'en' ? '' : `${locale}`),
             languages: languageAlternates as any,
